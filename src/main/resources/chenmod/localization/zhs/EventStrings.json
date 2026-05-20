@@ -1,0 +1,37 @@
+{
+  "${modID}:EventID": {
+    "NAME": "Event Name",
+    "DESCRIPTIONS": [
+      "This is event text, generally used to describe what's happening.",
+      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
+      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
+      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
+      "You have to mark every word individually.",
+      "You can also use [#ffffff]white[] hex color codes like this to color text.",
+      "Hex color codes also work in card text! But not on keywords, without some workarounds."
+    ],
+    "OPTIONS": [
+      "[Action Description] What you actually get.",
+      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
+      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Leave]",
+      "Select card to remove. (You can also stick extra text like this in here.)"
+    ]
+  },
+  "${modID}:TowerFierceEvent": {
+    "NAME": "杀戮之塔",
+    "DESCRIPTIONS": [
+      "你感受到了高塔的号召，这股陌生又熟悉的力量...似乎是来自 ~泰拉~ 的信号...\n空气中弥漫着危险的气息，但也藏着未知的机遇。",
+      "高塔的意志在回应你的 ~选择...~",
+      "你伸手触碰那道来自泰拉的力量， #r~杀戮之塔~ 卡牌化作流光融入你的卡组！",
+      "你不屑地耸肩，无视了这股来自异界的召唤，转身离去...",
+      "你在原地驻足片刻，最终选择了离开，高塔的呼唤渐渐消散在风中。"
+    ],
+    "OPTIONS": [
+      "[直面TA] 获得 #r杀戮之塔",
+      "[耸肩无视] 随机 #y获得 一张牌",
+      "[什么也不做] 离开"
+    ]
+  }
+
+}

@@ -1,0 +1,446 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "打击",
+    "DESCRIPTION": "对单个敌人造成两次 !D! 点伤害.NL 第二行描述（可选）。",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:AttackCard": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次."
+  },
+  "${modID}:SlashCard": {
+    "NAME": "赤霄·拔刀",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害."
+  },
+  "${modID}:DefendCard": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 ."
+  },
+  "${modID}:JueYingCard": {
+    "NAME": "赤霄·绝影",
+    "DESCRIPTION": "获得 1 层 无实体 ; 对目标造成 !D! 点伤害 !M! 次. NL 若 ${modID}:击杀 了目标，随机选择一名其他存活敌人重复伤害流程 NL (总斩击次数不超过 !M! 次). NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "获得 1 层 无实体 ; 对目标造成 !D! 点伤害 !M! 次. NL 若 ${modID}:击杀 了目标，随机选择一名其他存活敌人重复伤害流程. NL 消耗 ."
+  },
+  "${modID}:QiaoJiCard": {
+    "NAME": "赤霄·剑鞘打击",
+    "DESCRIPTION": "造成 !D! 点伤害, NL 然后 ${modID}:击晕 该敌人. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害, NL 然后 ${modID}:击晕 该敌人. NL 消耗 ."
+  },
+  "${modID}:HeChiCard": {
+    "NAME": "呵斥",
+    "DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌."
+  },
+  "${modID}:BenYeCard": {
+    "NAME": "赤霄·奔夜",
+    "DESCRIPTION": "本回合内,造成未被格挡的伤害后获得 !M! 点 格挡 . 消耗 .",
+    "UPGRADE_DESCRIPTION": "本回合内,造成未被格挡的伤害后获得 !M! 点 格挡 ."
+  },
+  "${modID}:YinChaCard": {
+    "NAME": "三点几了!",
+    "DESCRIPTION": "回复 !M!X 点体力, NL 回复 X-1 点 [E] . NL 消耗",
+    "UPGRADE_DESCRIPTION": "回复 !M!X 点体力, NL 回复 X 点 [E] . NL 消耗"
+  },
+  "${modID}:LongMenJinWeiJuCard": {
+    "NAME": "龙门近卫局",
+    "DESCRIPTION": "提升 1 点 力量 , NL 提升 1 点 敏捷 , NL 获得 3 点 荆棘 , NL 获得 25 金币 .",
+    "UPGRADE_DESCRIPTION": "提升 2 点 力量 , NL 提升 2 点 敏捷 , NL 获得 6 点 荆棘 , NL 获得 35 金币 ."
+  },
+  "${modID}:LieZhenCard": {
+    "NAME": "全军列阵!",
+    "DESCRIPTION": "你受到的未被格挡的伤害和反伤-!M!点.",
+    "UPGRADE_DESCRIPTION": "你受到的未被格挡的伤害和反伤-!M!点."
+  },
+  "${modID}:YuanShiBaoFaFormCard": {
+    "NAME": "源石爆发形态",
+    "DESCRIPTION": "虚无 . NL 每回合获得 !M! 张状态牌 NL ${modID}:源石爆发 .",
+    "UPGRADE_DESCRIPTION": "每回合获得 !M! 张状态牌 NL ${modID}:源石爆发+ ."
+  },
+  "${modID}:YuanShiBaoFaCard": {
+    "NAME": "源石爆发",
+    "DESCRIPTION": "不能被打出 . NL 回合结束自动被打出. NL 失去 !M! 点生命 , 对所有敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "不能被打出 . NL 回合结束自动被打出. NL 失去 !M! 点生命 , 对所有敌人造成 !D! 点伤害."
+  },
+  "${modID}:BaXiangYaoWuCard": {
+    "NAME": "靶向药物",
+    "DESCRIPTION": "${modID}:偷取 全体敌人最多 !M! 点正数 力量 .",
+    "UPGRADE_DESCRIPTION": "${modID}:偷取 全体敌人所有正数 力量 .",
+    "EXTENDED_DESCRIPTION": [
+      "没有可偷取的正数力量！",
+      " NL (升级后，可偷取全部正数力量)"
+    ]
+  },
+  "${modID}:PaperWorkCard": {
+    "NAME": "文书工作",
+    "DESCRIPTION": "摸 !M! 张牌. NL 被 消耗 后, 下回合获得 [E]  [E] .",
+    "UPGRADE_DESCRIPTION": "摸 !M! 张牌. NL 被 消耗 后, 下回合获得 [E]  [E]  [E] ."
+  },
+  "${modID}:MoneyCard": {
+    "NAME": "钱!!!",
+    "DESCRIPTION": "造成相当于已有金钱数值的1/10的伤害. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": " NL (可造成 !D! 点伤害)"
+  },
+  "${modID}:XingChenDouShiCard": {
+    "NAME": "星陈斗士",
+    "DESCRIPTION": "将 ${modID}:多重护甲 补充至 !${modID}:BuffCount! 层, 造成 !D! 点伤害 !M! 次.",
+    "UPGRADE_DESCRIPTION": "将 ${modID}:多重护甲 补充至 !${modID}:BuffCount! 层, 造成 !D! 点伤害 !M! 次."
+  },
+  "${modID}:CooperationCard": {
+    "NAME": "并肩作战",
+    "DESCRIPTION": "抽到时, 获得 !M! 点临时 力量 和临时 敏捷 . NL 被 消耗 时, 去除 X 层 ${modID}:活动肌肉 和 ${modID}:敏捷下降 . NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "抽到时, 获得 !M! 点临时 力量 和临时 敏捷 . NL 被 消耗 时, 去除 X+1 层 ${modID}:活动肌肉 和 ${modID}:敏捷下降 . NL 消耗 ."
+  },
+  "${modID}:BrokenScabbardCard": {
+    "NAME": "破碎剑鞘",
+    "DESCRIPTION": "每回合抽到的前 !M! 张牌耗能变为0, NL 回合结束时，将免费牌的张数减去1.",
+    "UPGRADE_DESCRIPTION": "每回合抽到的前 !M! 张牌耗能变为0, NL 回合结束时，将免费牌的张数减去1."
+  },
+  "${modID}:TowerFierceCard": {
+    "NAME": "杀戮之塔",
+    "DESCRIPTION": "固有 , 保留 , 不能被打出 NL 直到被 消耗 前, 所有敌人造成/受到的伤害增加 !M! %, 且死亡时你获得 !M! 点金币和生命值.",
+    "UPGRADE_DESCRIPTION": "固有 , 保留 , 不能被打出 NL 直到被 消耗 前, 所有敌人造成/受到的伤害增加 !M! %, 且死亡时你获得 !M! 点金币和生命值."
+  },
+  "${modID}:RoaringFlareCard": {
+    "NAME": "怒号光明",
+    "DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, 摸等同于消耗血量的数量的牌并获得等量 [E] . 消耗 ",
+    "UPGRADE_DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, 摸等同于消耗血量的数量的牌并获得等量 [E]. 消耗 .",
+    "EXTENDED_DESCRIPTION": [
+      "你可以 ${modID}:消耗血量打出 此牌, 摸 %d 张牌并获得 %d 点 [E] . 消耗 ."
+    ]
+  },
+  "${modID}:DoubleSwordsCard": {
+    "NAME": "影霄?!赤霄!!",
+    "DESCRIPTION": "抽到 ${modID}:赤霄 牌时, 对一名随机敌人造成 !M! 点伤害.",
+    "UPGRADE_DESCRIPTION": "抽到 ${modID}:赤霄 牌时, 对一名随机敌人造成 !M! 点伤害."
+  },
+  "${modID}:UnstoppableCard": {
+    "NAME": "势不可挡",
+    "DESCRIPTION": "消耗 并 ${modID}:使用 抽牌堆至多 !M! 张 ${modID}:防御 技能牌, NL 每 消耗 一张获得1点 力量 . NL 直到下次受到攻击而失去生命前,你的 格挡 不再消失.",
+    "UPGRADE_DESCRIPTION": "消耗 并 ${modID}:使用 抽牌堆的所有 ${modID}:防御 技能牌, NL 每 消耗 一张获得1点 力量 . NL 直到下次受到攻击而失去生命前,你的 格挡 不再消失."
+  },
+  "${modID}:UnbreakableCard": {
+  "NAME": "坚不可摧",
+  "DESCRIPTION": "使用抽牌堆中 !M! 张 ${modID}:防御 技能牌, 你的 格挡 不再消失.",
+  "UPGRADE_DESCRIPTION": "固有 . NL 使用抽牌堆中 !M! 张 ${modID}:防御 技能牌, NL 你的 格挡 不再消失."
+  },
+  "${modID}:LiberationCard": {
+  "NAME": "赤霄·解放",
+  "DESCRIPTION": "将一张 ${modID}:赤霄·绝影 放入你的抽牌堆.",
+  "UPGRADE_DESCRIPTION": "将一张 ${modID}:赤霄·绝影+ 放入你的抽牌堆."
+  },
+  "${modID}:Defend_ChiXiaoCard": {
+    "NAME": "赤霄·格挡",
+    "DESCRIPTION": "抽到时,获得 !B! 点 格挡 . NL 被 消耗 后获得 !M! 点 敏捷 . 消耗 .",
+    "UPGRADE_DESCRIPTION": "抽到时,获得 !B! 点 格挡 . NL 使用后, 消耗 .被 消耗 后获得 !M! 点 敏捷 . 消耗 ."
+  },
+  "${modID}:FatedDualCard": {
+  "NAME": "宿命对决",
+  "DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
+  "UPGRADE_DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
+  "EXTENDED_DESCRIPTION": [
+    "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害.",
+    " NL (会流失 %d 点血量 NL 额外造成 %d 点伤害)"
+  ]
+  },
+  "${modID}:PowerUpCard": {
+    "NAME": "赤霄·蓄力",
+    "DESCRIPTION": "使用时, 所有 ${modID}:赤霄 攻击牌的伤害 + !M! . NL 弃置或 消耗 时, 失去 !M! 点加成.",
+    "UPGRADE_DESCRIPTION": "使用时, 所有 ${modID}:赤霄 攻击牌的伤害 + !M! . NL 弃置或 消耗 时, 失去 !M! 点加成."
+  },
+  "${modID}:SnipeCard": {
+    "NAME": "定点狙杀",
+    "DESCRIPTION": "造成 !D! 点伤害, 对 ${modID}:远距离 目标的伤害提高. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害, 对 ${modID}:远距离 目标的伤害提高. NL 消耗 .",
+    "EXTENDED_DESCRIPTION":[
+      "NL (最多不超过原伤害的 !M! % )",
+      "造成 !D! 点伤害, 距离你越远的目标受到伤害越高."
+    ]
+  },
+  "${modID}:ShockCard": {
+    "NAME": "高压冲击",
+    "DESCRIPTION": "对全体敌人造成至少 !D! 点伤害, 对 ${modID}:近距离 目标的伤害提高 NL (最多不超过原伤害的 150 % ).",
+    "UPGRADE_DESCRIPTION": "对全体敌人造成至少 !D! 点伤害, 对 ${modID}:近距离 目标的伤害提高.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (最多 !M! 点)."
+    ]
+  },
+  "${modID}:HaiSiPowerCard": {
+  "NAME": "海嗣之力",
+  "DESCRIPTION": "虚无 . NL 增加 !M! X 最大生命值. NL (可保留至多3点增量). NL 受到的伤害而损失体力时改为失去等额最大生命值.",
+  "UPGRADE_DESCRIPTION": "虚无 . NL 增加 !M! X 最大生命值. NL (可保留至多3点增量). NL 受到的伤害而损失体力时改为失去等额最大生命值."
+  },
+  "${modID}:FrozenCard": {
+    "NAME": "霜冻",
+    "DESCRIPTION": "保留 , NL 如果本场战斗中打出的上一张牌为状态牌,获得 [E] , NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "保留 , NL 如果本场战斗中打出的上一张牌为状态牌,获得 [E] , NL 消耗 ."
+  },
+  "${modID}:FerociousCard": {
+    "NAME": "凶恶",
+    "DESCRIPTION": "每回合首次获得其他增益状态时,摸 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "每回合首次获得其他增益状态时,摸 !M! 张牌."
+  },
+  "${modID}:ReformationCard": {
+    "NAME": "重整精神",
+    "DESCRIPTION": "将手牌随机放回抽牌堆, 然后重新抽等量的牌. 消耗 .",
+    "UPGRADE_DESCRIPTION": "将手牌随机放回抽牌堆, 然后重新抽等量的牌."
+  },
+  "${modID}:BlackCloudsCard": {
+    "NAME": "黑云压城",
+    "DESCRIPTION": "回合开始抽牌时,若拥有负面效果,多抽 !M! 张牌并获得 [E] .",
+    "UPGRADE_DESCRIPTION": "回合开始抽牌时,若拥有负面效果,多抽 !M! 张牌并获得 [E] ."
+  },
+  "${modID}:CommandCard": {
+    "NAME": "临阵指挥",
+    "DESCRIPTION": " 消耗 所有手牌，并获得等数量的随机牌. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "消耗 所有手牌，并获得等数量 升级 过的随机牌. NL 消耗 ."
+  },
+  "${modID}:ToleranceCard": {
+    "NAME": "忍",
+    "DESCRIPTION": "消耗所有手牌,每消耗一张,获得 !M! 点 ${modID}:破甲 ,结束当前回合.",
+    "UPGRADE_DESCRIPTION": "消耗所有手牌,每消耗一张,获得 !M! 点 ${modID}:破甲 ,结束当前回合."
+  },
+  "${modID}:SpicySugarCard": {
+    "NAME": "辣味的糖",
+    "DESCRIPTION": "固有 , 保留 . NL 获得 !M! 层 易伤 , 抽满手牌并将耗能变为0. NL 使用后, 消耗 并从牌组中永久移除",
+    "UPGRADE_DESCRIPTION": "固有 , 保留 . NL 抽满手牌并将耗能变为0. NL 使用后, 消耗 并从牌组中永久移除"
+  },
+  "${modID}:TheBirthOfTragedyCard": {
+    "NAME": "苦难摇篮",
+    "DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
+    "UPGRADE_DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
+    "EXTENDED_DESCRIPTION": [
+      " NL (失去 %d 点生命)."
+    ]
+  },
+  "${modID}:PatrolCard": {
+    "NAME": "城外巡逻",
+    "DESCRIPTION": "获得 !B! 点 格挡 , NL 对所有具有攻击意图的敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 , NL 对所有具有攻击意图的敌人造成 !D! 点伤害."
+  },
+  "${modID}:FractureCard": {
+    "NAME": "碎骨",
+    "DESCRIPTION": "稀有度为普通的牌使用后将被 消耗 , NL 然后获得 !M! 点 力量 .",
+    "UPGRADE_DESCRIPTION": "稀有度为普通的牌使用后将被 消耗 , NL 然后获得 !M! 点 力量 ."
+  },
+  "${modID}:RushingCard": {
+    "NAME": "奔赴战场",
+    "DESCRIPTION": "本回合获得 !M! 点临时 敏捷 .",
+    "UPGRADE_DESCRIPTION": "本回合获得 !M! 点临时 敏捷 ."
+  },
+  "${modID}:AttackWeakPointCard": {
+    "NAME": "弱点打击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次. NL 若目标具有攻击意图: 施加 !${modID}:BuffCount! 层 虚弱 ; NL 否则, 施加 !${modID}:BuffCount! 层 易伤 .",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次. NL 若目标具有攻击意图: 施加 !${modID}:BuffCount! 层 虚弱 ; NL 否则, 施加 !${modID}:BuffCount! 层 易伤 ."
+  },
+  "${modID}:InterrogationCard": {
+    "NAME": "审讯",
+    "DESCRIPTION": "令一名敌人降低 !M! 点 力量 , 其每回合恢复1点力量. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "令一名敌人降低 !M! 点 力量 , 其每回合恢复1点力量. NL 消耗 ."
+  },
+  "${modID}:TianKuiCard": {
+    "NAME": "赤霄·天喟",
+    "DESCRIPTION": "对一名敌人造成相当于其最大生命值 !M! % 的伤害. NL (至少造成 !D! 点 伤害). NL 可被多次 升级 .",
+    "UPGRADE_DESCRIPTION": "对一名敌人造成相当于其最大生命值 !M! % 的伤害. NL (至少造成 !D! 点 伤害). NL 可被多次 升级 .",
+    "EXTENDED_DESCRIPTION": [
+      "对一名敌人造成相当于其最大生命值 !M! % 的伤害.",
+      " NL (可造成 !D! 点 伤害)."
+    ]
+  },
+  "${modID}:PreparationCard": {
+    "NAME": "整备",
+    "DESCRIPTION": "手牌中所有 ${modID}:多段攻击 的攻击牌的攻击次数增加 !M! 次.",
+    "UPGRADE_DESCRIPTION": "手牌中所有 ${modID}:多段攻击 的攻击牌的攻击次数增加 !M! 次."
+  },
+  "${modID}:DustCard": {
+    "NAME": "源石粉尘",
+    "DESCRIPTION": "回合结束时，若此牌在你手中，你失去 !M! 点体力. 使用后, 消耗 . 被 消耗 后, 摸 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "回合结束时，若此牌在你手中，你失去 !M! 点体力. 使用后, 消耗 . 被 消耗 后, 摸 !M! 张牌."
+  },
+  "${modID}:BeforeActionCard": {
+    "NAME": "行动准备",
+    "DESCRIPTION": "获得 !B! 点 格挡 , NL 将弃牌堆中的一张牌置于抽牌堆顶部 .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 , NL 将弃牌堆中的一张牌置于抽牌堆顶部并使其在本场战斗内 升级 ."
+  },
+  "${modID}:QuittingTimeCard": {
+    "NAME": "下班时间",
+    "DESCRIPTION": "花费 5 金币, NL 回复 !M! 生命. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "花费 5 金币, NL 回复 !M! 生命. NL 消耗 .",
+    "EXTENDED_DESCRIPTION": [
+      "我没有足够的金币."
+    ]
+  },
+  "${modID}:CandleLightFormCard": {
+    "NAME": "伺烛形态",
+    "DESCRIPTION": "每回合抽牌后，获得 !M! 张 ${modID}:赤霄·烛光打击 .",
+    "UPGRADE_DESCRIPTION": "每回合抽牌后，获得 !M! 张 ${modID}:赤霄·烛光打击+ ."
+  },
+  "${modID}:CandleLightAttackCard": {
+    "NAME": "赤霄·烛光打击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次, NL 获得 [E] . 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次, NL 获得 [E] ."
+  },
+  "${modID}:FocusCard": {
+    "NAME": "战斗专注",
+    "DESCRIPTION": "本回合内打出牌后,若与上一张牌类型相同, 抽 !M! 张牌, NL 若牌名也相同, 获得 [E] .",
+    "UPGRADE_DESCRIPTION": "本回合内打出牌后,若与上一张牌类型相同, 抽 !M! 张牌, NL 若牌名也相同, 获得 [E] ."
+  },
+  "${modID}:AuldLangSyneCard": {
+    "NAME": "往昔时光",
+    "DESCRIPTION": "获得 !M! 点 活力 .",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 活力 ."
+  },
+  "${modID}:NewBeginningCard": {
+    "NAME": "新的开始",
+    "DESCRIPTION": "若在本回合之后的某个回合内不再使用牌,则 消耗 所有手牌, 再进行一个回合. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "若在本回合之后的某个回合内不再使用牌,则 消耗 所有手牌, 再进行一个回合. NL 消耗 ."
+  },
+  "${modID}:OldBeginningCard": {
+    "NAME": "旧的开始",
+    "DESCRIPTION": "获得相当于手牌数 +!M! 的 格挡 , 结束当前回合.",
+    "UPGRADE_DESCRIPTION": "获得相当于手牌数 +!M! 的 格挡 , 结束当前回合.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (获得 !B! 点 格挡 )"
+    ]
+  },
+  "${modID}:RuptureCard": {
+    "NAME": "决裂",
+    "DESCRIPTION": "回复你的已损生命并使目标回复等额生命。 NL 获得 !M! 点 力量 , NL 目标获得1点 力量 . NL 结束你的回合, 消耗 .",
+    "UPGRADE_DESCRIPTION": "回复你的已损生命并使目标回复等额生命。 NL 获得 !M! 点 力量 , NL 目标获得1点 力量 . NL 结束你的回合, 消耗 ."
+  },
+  "${modID}:TranquilityCard": {
+    "NAME": "归于宁静",
+    "DESCRIPTION": "造成 !D! 点伤害, NL 若目标具有攻击意图, NL 再造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害, NL 若目标具有攻击意图, NL 再造成 !D! 点伤害."
+  },
+  "${modID}:LegacyCard": {
+    "NAME": "传承",
+    "DESCRIPTION": "选择一张稀有度不为稀有的牌, NL 战斗结束后将其随机变为一张稀有度高于原牌的牌.",
+    "UPGRADE_DESCRIPTION": "选择一张稀有度不为稀有的牌, NL 战斗结束后将其随机变为一张稀有度高于原牌的牌."
+  },
+  "${modID}:ReunionCard": {
+    "NAME": "再相逢",
+    "DESCRIPTION": "获得 !B! 点 格挡 , NL 下回合再获得 !M! 点 格挡 .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 , NL 下回合再获得 !M! 点 格挡 ."
+  },
+  "${modID}:AdherenceCard": {
+    "NAME": "本性的坚守",
+    "DESCRIPTION": "从卡牌中获得 格挡 时，不再获得 格挡 ，改为获得 3 层 ${modID}:乌尔比安的助力 .",
+    "UPGRADE_DESCRIPTION": " 固有 , NL 从卡牌中获得 格挡 时，不再获得 格挡 ，改为获得 3 层 ${modID}:乌尔比安的助力 ."
+  },
+  "${modID}:SeeYouTomorrowCard": {
+    "NAME": "我们明日见",
+    "DESCRIPTION": "选择一张牌 消耗 ,下回合开始时获得这张牌的复制品.",
+    "UPGRADE_DESCRIPTION": "选择一张牌 消耗 ,下回合开始时获得这张牌的复制品并 升级 ."
+  },
+  "${modID}:CiSuiXingCard": {
+    "NAME": "辞岁行",
+    "DESCRIPTION": "attack",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:SlashPlusCard": {
+    "NAME": "赤霄·拔刀破",
+    "DESCRIPTION": "获得 !M! 点 ${modID}:破甲 , NL 对所有敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 ${modID}:破甲 , NL 对所有敌人造成 !D! 点伤害."
+  },
+  "${modID}:ConscriptCard": {
+    "NAME": "征召上前",
+    "DESCRIPTION": "摸 !M! 张牌. NL 被 消耗 后, 刷新 ${modID}:琉璃壁 .",
+    "UPGRADE_DESCRIPTION": "摸 !M! 张牌. NL 被 消耗 后, 刷新 ${modID}:琉璃壁 ."
+  },
+  "${modID}:IronFlowerCard": {
+    "NAME": "铁花飞",
+    "DESCRIPTION": "造成未被格挡的伤害时，回复 !M! 点生命. NL ${modID}:锁定 50%的最大生命.",
+    "UPGRADE_DESCRIPTION": " 固有 . NL 造成未被格挡的伤害时，回复 !M! 点生命. NL ${modID}:锁定 50%的最大生命."
+  },
+  "${modID}:ObservationCard": {
+    "NAME": "观察",
+    "DESCRIPTION": "Skill",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:DropKickCard": {
+    "NAME": "飞身踢",
+    "DESCRIPTION": "造成 !D! 点伤害, 若目标有负面状态, 摸一张牌并获得 [E] .",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害, 若目标有负面状态, 摸一张牌并获得 [E] ."
+  },
+  "${modID}:TheMountainsCard": {
+    "NAME": "万重山",
+    "DESCRIPTION": "Skill",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:DengLinYiCard": {
+    "NAME": "登临意",
+    "DESCRIPTION": "获得 !B! 点 格挡 . NL 刷新 ${modID}:琉璃壁 . NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 . NL 刷新 ${modID}:琉璃壁 . NL 消耗 ."
+  },
+  "${modID}:AlterCard": {
+    "NAME": "警戒",
+    "DESCRIPTION": "获得 !B! 点 格挡 . NL 摸 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 . NL 摸 !M! 张牌."
+  },
+  "${modID}:HaveATryCard": {
+    "NAME": "跃跃欲试",
+    "DESCRIPTION": "获得相当于手牌中攻击牌张数的 [E] , NL 本回合所有技能牌的费用+1.",
+    "UPGRADE_DESCRIPTION": "获得相当于手牌中攻击牌张数的 [E] , NL 本回合所有技能牌的费用+1.",
+    "EXTENDED_DESCRIPTION": [
+     " NL (获得 !M! 点 [E] )"
+    ]
+  },
+  "${modID}:RecastCard": {
+    "NAME": "赤霄·重铸",
+    "DESCRIPTION": "弃置手中所有攻击牌, 然后摸等量的牌并获得等量 格挡 . NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "弃置手中所有攻击牌, 然后摸等量的牌并获得等量 格挡 . NL 消耗 ."
+  },
+  "${modID}:PerambulateCard": {
+    "NAME": "赤霄·天街巡游",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次. NL 随机 消耗 手牌中的一张攻击牌, 将其的伤害添加给此牌.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次. NL 随机 消耗 手牌中的一张攻击牌, 将其的伤害添加给此牌, NL 并使此牌伤害段数+1."
+  },
+  "${modID}:TianChengCard": {
+    "NAME": "赤霄·天瞠(缺卡图)",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:YunLieCard": {
+    "NAME": "赤霄·云裂",
+    "DESCRIPTION": "保留 . NL 造成 !D! 点伤害 !M! 次. NL 每当此牌被 保留 ,则攻击段数+1.",
+    "UPGRADE_DESCRIPTION": "保留 . NL 造成 !D! 点伤害 !M! 次. NL 每当此牌被 保留 ,则攻击段数+1."
+  },
+  "${modID}:LeiFengCard": {
+    "NAME": "赤霄·泪锋",
+    "DESCRIPTION": "弃置手牌中不为 ${modID}:赤霄 的牌. NL 向手牌中添加等数量张 ${modID}:赤霄·收刀 .",
+    "UPGRADE_DESCRIPTION": "弃置手牌中不为 ${modID}:赤霄 的牌. NL 向手牌中添加等数量张 ${modID}:赤霄·收刀+ ."
+  },
+  "${modID}:StorageCard": {
+    "NAME": "赤霄·收刀",
+    "DESCRIPTION": "摸 !M! 张牌. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "摸 !M! 张牌. NL 消耗 ."
+  },
+  "${modID}:TouristCard": {
+    "NAME": "女游客C的反击",
+    "DESCRIPTION": "造成 !D! 点伤害. 若目标具有攻击意图, 再造成 !D! 点伤害. NL 对 ${modID}:近距离 目标的伤害提高.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害. 若目标具有攻击意图, 再造成 !D! 点伤害. NL 对 ${modID}:近距离 目标的伤害提高."
+  },
+  "${modID}:ExplosiveArtCard": {
+    "NAME": "艺术就是爆炸",
+    "DESCRIPTION": " ${modID}:琉璃壁 对其他目标造成的反伤提高 !M! %. NL 刷新 ${modID}:琉璃壁 .",
+    "UPGRADE_DESCRIPTION": "固有 , NL ${modID}:琉璃壁 对其他目标造成的反伤提高 !M! %. NL 刷新 ${modID}:琉璃壁 ."
+  },
+  "${modID}:SummerVacationCard": {
+    "NAME": "多索雷斯假日",
+    "DESCRIPTION": " ,刷新 ${modID}:琉璃壁 .",
+    "UPGRADE_DESCRIPTION": " 刷新 ${modID}:琉璃壁 ."
+  },
+  "${modID}:ChoiceDecisionCard": {
+    "NAME": "抉择，抉择",
+    "DESCRIPTION": "虚无 . NL 选择手牌中的一张牌，将其费用于本场战斗中变为0. 消耗 .",
+    "UPGRADE_DESCRIPTION": "保留 . NL 选择手牌中的一张牌，将其费用于本场战斗中变为0. 消耗 ."
+  }
+}

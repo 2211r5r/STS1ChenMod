@@ -1,0 +1,174 @@
+
+enemy_1514_smephi.png
+size: 776,141
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+C_Body
+  rotate: false
+  xy: 132, 34
+  size: 130, 105
+  orig: 130, 105
+  offset: 0, 0
+  index: -1
+C_Eye
+  rotate: false
+  xy: 766, 98
+  size: 5, 18
+  orig: 5, 18
+  offset: 0, 0
+  index: -1
+C_Eye_Op
+  rotate: false
+  xy: 766, 118
+  size: 8, 21
+  orig: 8, 21
+  offset: 0, 0
+  index: -1
+C_Head
+  rotate: false
+  xy: 40, 29
+  size: 90, 110
+  orig: 90, 110
+  offset: 0, 0
+  index: -1
+C_Head_II
+  rotate: false
+  xy: 264, 35
+  size: 78, 104
+  orig: 78, 104
+  offset: 0, 0
+  index: -1
+C_Head_II_Eye_L_Off
+  rotate: false
+  xy: 724, 28
+  size: 12, 14
+  orig: 14, 17
+  offset: 1, 2
+  index: -1
+C_Head_II_Eye_L_Op
+  rotate: false
+  xy: 751, 14
+  size: 11, 14
+  orig: 13, 15
+  offset: 1, 0
+  index: -1
+C_Head_II_Eye_R_Off
+  rotate: false
+  xy: 738, 11
+  size: 11, 17
+  orig: 13, 20
+  offset: 2, 1
+  index: -1
+C_Head_II_Eye_R_Op
+  rotate: false
+  xy: 724, 12
+  size: 12, 14
+  orig: 12, 15
+  offset: 0, 1
+  index: -1
+C_Mouth
+  rotate: false
+  xy: 745, 63
+  size: 28, 27
+  orig: 30, 28
+  offset: 1, 0
+  index: -1
+C_Neck
+  rotate: false
+  xy: 2, 8
+  size: 36, 131
+  orig: 36, 131
+  offset: 0, 0
+  index: -1
+C_Neck_Feather_I
+  rotate: false
+  xy: 700, 15
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1
+C_Neck_Feather_II
+  rotate: false
+  xy: 745, 30
+  size: 24, 31
+  orig: 24, 31
+  offset: 0, 0
+  index: -1
+C_Stone
+  rotate: false
+  xy: 324, 2
+  size: 15, 31
+  orig: 15, 31
+  offset: 0, 0
+  index: -1
+C_Tail
+  rotate: false
+  xy: 462, 77
+  size: 164, 62
+  orig: 164, 62
+  offset: 0, 0
+  index: -1
+C_Wing_L_I
+  rotate: false
+  xy: 462, 17
+  size: 194, 58
+  orig: 194, 58
+  offset: 0, 0
+  index: -1
+C_Wing_L_II
+  rotate: false
+  xy: 344, 67
+  size: 116, 72
+  orig: 116, 72
+  offset: 0, 0
+  index: -1
+C_Wing_R_I
+  rotate: false
+  xy: 344, 5
+  size: 52, 60
+  orig: 52, 60
+  offset: 0, 0
+  index: -1
+C_Wing_R_II
+  rotate: false
+  xy: 628, 92
+  size: 136, 47
+  orig: 136, 47
+  offset: 0, 0
+  index: -1
+C_Wing_R_III
+  rotate: false
+  xy: 658, 44
+  size: 85, 46
+  orig: 85, 46
+  offset: 0, 0
+  index: -1
+F_Foot_I
+  rotate: false
+  xy: 398, 11
+  size: 56, 54
+  orig: 56, 55
+  offset: 0, 1
+  index: -1
+F_Foot_II
+  rotate: false
+  xy: 264, 2
+  size: 58, 31
+  orig: 58, 34
+  offset: 0, 1
+  index: -1
+F_Foot_III
+  rotate: false
+  xy: 658, 8
+  size: 40, 34
+  orig: 40, 34
+  offset: 0, 0
+  index: -1
+F_Foot_IV
+  rotate: false
+  xy: 132, 2
+  size: 51, 30
+  orig: 53, 30
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,33 @@
+{
+  "${modID}:ChenModConfig": {
+    "TEXT_DICT": {
+      "TIPS": "修改Config以后，务必创建【新的游戏】防止出现BUG!!!!!",
+      "ADD_EVENT_TOWERFIERCE": "添加事件【杀戮之塔(一层)】。",
+      "ADD_FROST_NOVA": "添加【霜星(二层)】。",
+      "ADD_MEPHISO_AND_FAUST": "添加【梅菲斯特&浮士德(二层)】。",
+      "ADD_BULDROKKASTEE": "添加【博卓卡斯替(三层)】。",
+      "ADD_MEPHISO_SINGER": "添加【梅菲斯特·歌者(三层)】。",
+      "ADD_TALULAH": "添加【塔露拉(四层)】。",
+      "REMOVE_ORANGEAL_BOSS":"移除【二三四层】的原版Boss。",
+      "ORANGEAL_RELIC":"将【陈】的初始遗物和对应BOSS遗物改为原版风格.",
+      "DEBUG_MODE": "DEBUG模式，打击和防御数值为99."
+    }
+  },
+  "${modID}:DiscardPileToTopOfDeckAndUpgradeAction": {
+    "TEXT": ["选择一张牌放到你抽牌堆的顶端并使其在本场战斗内【升级】!"]
+  },
+  "${modID}:SeeYouTomorrowAction": {
+    "TEXT": [
+      "【消耗】, 下回合获得此牌.",
+      "【消耗】, 下回合获得此牌并【升级】."
+    ]
+  },
+  "${modID}:ChoiceDecisionAction": {
+    "TEXT": [
+      "将此牌的费用变为0."
+    ]
+  },
+  "${modID}:LegacyAction": {
+    "TEXT": ["选择一张牌，将此牌变化为稀有度高于其的一张随机牌"]
+  }
+}

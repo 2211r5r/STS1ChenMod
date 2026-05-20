@@ -1,0 +1,55 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:MultiHitPower_temp": {
+    "NAME": "多重之力",
+    "DESCRIPTIONS": [
+      "本回合内，你的下一张攻击牌会被打出 %d 次."
+    ]
+  },
+
+  "${modID}:MultiHitPower": {
+    "NAME": "多重之力·稳定",
+    "DESCRIPTIONS": [
+      "你的下一张攻击牌会被打出 %d 次."
+    ]
+  },
+  "${modID}:LieZhenPower_temp": {
+    "NAME": "临时列阵",
+    "DESCRIPTIONS": [
+      "每次受到未被格挡的伤害时，减少 %d 点伤害。你的回合开始时移除。"
+    ]
+  },
+
+  "${modID}:LieZhenPower": {
+    "NAME": "稳固阵型",
+    "DESCRIPTIONS": [
+      "每次受到未被格挡的伤害时，减少 %d 点伤害。"
+    ]
+  },
+  "${modID}:YuanShiBaoFaPower": {
+    "NAME": "源石爆发",
+    "DESCRIPTIONS": [
+      "抽牌后，向手牌中添加 %d 张【源石爆发】。",
+      "抽牌后，向手牌中添加 %d 张【源石爆发+】。"
+    ]
+  },
+  "${modID}:StunPower": {
+  "NAME": "眩晕",
+  "DESCRIPTIONS": [
+    "怪物在这个回合被击晕了, 无法行动(不可叠加).",
+    "意识恢复"
+  ]
+},
+  "${modID}:LiberationPower": {
+    "NAME": "赤霄·解放",
+    "DESCRIPTIONS": [
+      "所有的【赤霄】系攻击牌伤害 + %d 点"
+    ]
+  }
+
+}

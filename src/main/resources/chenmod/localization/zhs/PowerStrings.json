@@ -1,0 +1,268 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:MultiHitPower_temp": {
+    "NAME": "多重之力",
+    "DESCRIPTIONS": [
+      "本回合内，你的下一张攻击牌会被打出 %d 次."
+    ]
+  },
+
+  "${modID}:MultiHitPower": {
+    "NAME": "多重之力·稳定",
+    "DESCRIPTIONS": [
+      "你的下一张攻击牌会被打出 %d 次."
+    ]
+  },
+
+  "${modID}:BenYePower": {
+    "NAME": "赤霄·奔夜",
+    "DESCRIPTIONS": [
+      "本回合内造成伤害时获得 %d 点 格挡 ."
+    ]
+  },
+  "${modID}:LieZhenPower_temp": {
+    "NAME": "临时列阵",
+    "DESCRIPTIONS": [
+      "每次受到未被格挡的伤害时，减少 %d 点伤害。你的回合开始时移除。"
+    ]
+  },
+
+  "${modID}:LieZhenPower": {
+    "NAME": "稳固阵型",
+    "DESCRIPTIONS": [
+      "每次受到 #y未被格挡的伤害 和 #y反伤 时，减少 %d 点伤害。"
+    ]
+  },
+  "${modID}:YuanShiBaoFaPower": {
+    "NAME": "源石爆发",
+    "DESCRIPTIONS": [
+      "抽牌后，向手牌中添加 %d 张 #y源石爆发 。",
+      "抽牌后，向手牌中添加 %d 张 #y源石爆发+ 。"
+    ]
+  },
+  "${modID}:StunPower": {
+  "NAME": "眩晕",
+  "DESCRIPTIONS": [
+    "怪物在这个回合被击晕了, 无法行动(不可叠加).",
+    "意识恢复"
+  ]
+},
+  "${modID}:LiberationPower": {
+    "NAME": "赤霄·解放",
+    "DESCRIPTIONS": [
+      "所有的【赤霄】系攻击牌伤害 + %d 点"
+    ]
+  },
+  "${modID}:TowerFiercePower": {
+    "NAME": "杀戮之塔",
+    "DESCRIPTIONS": [
+      "此目标造成/受到伤害时增加 #b%d %%(至少增加 #b1 点); #r死亡时 你 #g回复  %d #y生命 并获得 %d #y金币"
+    ]
+  },
+  "${modID}:HaiSiPower": {
+    "NAME": "海嗣的侵蚀",
+    "DESCRIPTIONS": [
+      "受到伤害而损失生命时, 改为失去等额的 #y最大生命值; 离开房间时, 若你的生命值值大于 #b%d 点, 保留至多 #b3 点增量",
+      "最大生命值-%d "
+    ]
+  },
+  "${modID}:BrokenScabbardPower": {
+    "NAME": "破碎剑鞘",
+    "DESCRIPTIONS": [
+      "每回合抽到的前 #b%d 张牌费用变为 #b0 , 回合结束时，将这个数值减去 #b1 .",
+      "手牌中所有牌的费用 #y增加 #b%d ，回合开始时，将这个加费幅度增加 #b1 .",
+      "费用增加"
+    ]
+  },
+  "${modID}:LoseBarricadePower": {
+    "NAME": "破碎壁垒",
+    "DESCRIPTIONS": [
+      "你受到来自 #y攻击 的伤害而失去生命值时, 失去 #y壁垒 (你的 #y格挡 不再回合开始时消失)和此减益效果."
+    ]
+  },
+  "${modID}:LastMarchPower": {
+    "NAME": "最后的行军!",
+    "DESCRIPTIONS": [
+      "进入 #y行军模式 , 距离玩家角色越近, 造成的伤害越高(最高造成原伤害的 #b150 #b%% )."
+    ]
+  },
+  "${modID}:EmbattlePower": {
+    "NAME": "列阵!",
+    "DESCRIPTIONS": [
+      "打出单目标攻击牌时，你必须先攻击层数最高的 #y列阵! 持有者."
+    ]
+  },
+  "${modID}:FierceBurningPower": {
+    "NAME": "烈焰焚息",
+    "DESCRIPTIONS": [
+      "对 #y塔露拉 造成的伤害减少 #b50 #b%% (最终乘算), 持续 #b%d 回合 ."
+    ]
+  },
+  "${modID}:FrozenPower": {
+    "NAME": "霜冻",
+    "DESCRIPTIONS": [
+      "手牌中存在 #b霜冻 时，不能打出 #b状态牌以外 的牌.",
+      "我不能打出状态牌以外的牌."
+    ]
+  },
+  "${modID}:FerociousPower": {
+    "NAME": "凶恶",
+    "DESCRIPTIONS": [
+      "每回合 #y首次 获得 #y正面状态 时，摸 #b%d 张牌."
+    ]
+  },
+  "${modID}:DoubleSwordsPower": {
+    "NAME": "影霄",
+    "DESCRIPTIONS": [
+      "你抽到 #r赤霄 牌时, #y影霄 会对一名随机敌人造成 #b%d 点伤害."
+    ]
+  },
+  "${modID}:SnowMonsterTeamPower": {
+  "NAME": "雪怪小队",
+  "DESCRIPTIONS": [
+    "手牌中存在 #b霜冻 时，该敌人额外对你造成 #b50 %%的伤害."
+  ]
+},
+  "${modID}:BreakBlockPower_monster": {
+    "NAME": "破甲",
+    "DESCRIPTIONS": [
+      "下一次造成伤害时，额外附带相当于目标格挡值 #b%d %% 的伤害."
+    ]
+  },
+  "${modID}:BreakBlockPower_player": {
+    "NAME": "破甲",
+    "DESCRIPTIONS": [
+      "你的下一张牌造成伤害时，额外附带相当于目标格挡值 #b%d %% 的伤害."
+    ]
+  },
+  "${modID}:BlackCloudsPower": {
+    "NAME": "黑云压城",
+    "DESCRIPTIONS": [
+      "若拥有负面效果,多抽 #b%d 张牌并额外获得 #b%d 点 [R] ."
+    ]
+  },
+  "${modID}:FracturePower": {
+    "NAME": "碎骨",
+    "DESCRIPTIONS": [
+      "稀有度为 #y普通 的牌在使用后将被 #y消耗 , 然后你获得 #b%d 点 #y力量 ."
+    ]
+  },
+  "${modID}:InterrogationPower": {
+    "NAME": "审讯",
+    "DESCRIPTIONS": [
+      "每回合回复 #b1 点 #y力量，持续 #b%d 个回合."
+    ]
+  },
+  "${modID}:DustPower": {
+    "NAME": "粉尘释放",
+    "DESCRIPTIONS": [
+      "抽牌时，若当前回合内抽牌累计数量 #y大于 #b5 张，失去 #b1 点生命(不会 #y致死 )，持续 #b%d 个回合."
+    ]
+},
+  "${modID}:ZhuangShiPower": {
+    "NAME": "壮誓",
+    "DESCRIPTIONS": [
+      "回合开始抽牌后，手牌中每有一张 #y攻击牌 ,失去 #b1 点生命(不会 #y致死 )，并获得 [R] ."
+    ]
+  },
+  "${modID}:MephistoSingerPower": {
+    "NAME": "新生的羽翼???",
+    "DESCRIPTIONS": [
+      " #y梅菲斯特? 的生命值首次降低到 #b%d 时，将生命值回复到该值，并进入 #y休眠状态 .",
+      " 睡吧...睡吧...为你唱一首摇篮曲 (通关后，你回复 #b50 %的生命值)."
+    ]
+  },
+  "${modID}:CandleLightFormPower": {
+    "NAME": "伺烛客",
+    "DESCRIPTIONS": [
+      "每回合抽牌后，获得 #b%d 张 #y烛光打击 .",
+      "每回合抽牌后，获得 #b%d 张 #y烛光打击+ ."
+    ]
+  },
+  "${modID}:FocusPower": {
+    "NAME": "战斗专注",
+    "DESCRIPTIONS": [
+      " 本回合内打出牌后,若与上一张牌类型相同, 抽 #b%d 张牌, 若牌名也相同, 获得 #b%d 点 [R] ."
+    ]
+  },
+  "${modID}:LegacyPower": {
+    "NAME": "传承",
+    "DESCRIPTIONS": [
+      "选择一张牌变化为比其稀有度高的一张随机牌.",
+      "战斗结束后，将【",
+      "】变为一张随机",
+      " #y稀有牌 .",
+      " #b罕见牌 ."
+    ]
+  },
+  "${modID}:NewBeginningPower": {
+    "NAME": "新的开始",
+    "DESCRIPTIONS": [
+      "若回合内不再使用牌,  #y消耗 所有手牌，再进行一个回合."
+    ]
+  },
+  "${modID}:NextTurnEnergyPower": {
+    "NAME": "下回合能量",
+    "DESCRIPTIONS": [
+      "下回合开始时，获得 #b%d 点 [R] ."
+    ]
+  },
+  "${modID}:UlpianusPower": {
+    "NAME": "乌尔比安的助力",
+    "DESCRIPTIONS": [
+      "损失生命时，回复 #b%d 点生命，回合开始时，失去此能力的 #b一半 层数.你通过 #y使用或打出 具有 #y格挡 的卡牌时，此能力层数增加 #b3 层."
+    ]
+  },
+  "${modID}:SeeYouTomorrowPower": {
+    "NAME": "我们明日见",
+    "DESCRIPTIONS": [
+      "下回合开始时，将 %d 张【",
+      "】加入你的手牌.",
+      "并 #y升级 之.",
+      "出现了一些问题，没有找到选中的复制牌."
+    ]
+  },
+  "${modID}:SkillCostUpPower": {
+    "NAME": "技能牌费用增加",
+    "DESCRIPTIONS": [
+      " #y技能牌 费用 + #b1 ，直到本回合结束."
+    ]
+  },
+  "${modID}:PowerCostUpPower": {
+    "NAME": "能力牌费用增加",
+    "DESCRIPTIONS": [
+      " #y能力牌 费用 + #b1 ，直到本回合结束."
+    ]
+  },
+  "${modID}:AttackCostUpPower": {
+    "NAME": "攻击牌牌费用增加",
+    "DESCRIPTIONS": [
+      " #y攻击牌 费用 + #b1 ，直到本回合结束."
+    ]
+  },
+  "${modID}:GlazeWallPower": {
+    "NAME": "琉璃壁",
+    "DESCRIPTIONS": [
+      "不再 #y损失生命 且记录损失值, 当前已记录 #b%d 点.",
+      "不再 #y损失生命 且记录损失值, 当前已记录 #b%d 点. 你的回合结束时, #y你 和 #y全体敌人 受到 #b%d 点 #y反伤 并移除此效果."
+    ]
+  },
+  "${modID}:IronFlowerPower": {
+    "NAME": "铁花飞",
+    "DESCRIPTIONS": [
+      "造成未被格挡的伤害时, 回复 #b%d 点生命.",
+      "造成未被格挡的伤害时, 回复 #b%d 点生命. 回复生命时,改为获得等额 #y格挡 ."
+    ]
+  },
+  "${modID}:ExplosiveArtPower": {
+    "NAME": "艺术就是爆炸",
+    "DESCRIPTIONS": [
+      "#y琉璃壁 造成的伤害提高 #b%d %%."
+    ]
+  }
+}

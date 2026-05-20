@@ -1,0 +1,66 @@
+{
+  "${modID}:ShieldGuard": {
+    "NAME": "游击队盾卫",
+    "DIALOG": [],
+    "MOVES": ["盾击","防御!","列阵!!","行军!!"]
+  },
+  "${modID}:Talulah": {
+    "NAME": "塔露拉?(“不死的黑蛇”)",
+    "DIALOG": [],
+    "MOVES": ["打击","火焰护盾","火焰焚息","烈焰焚息","火雨","不息恶火"]
+  },
+  "${modID}:Buldrokkastee": {
+    "NAME": "博卓卡斯替(爱国者)",
+    "DIALOG": [
+      "罗德岛...我将...进军!!!",
+      "源石...技艺?"
+    ],
+    "MOVES": ["四连击", "挥砍", "投掷大戟"]
+  },
+  "${modID}:FrostNova": {
+    "NAME": "霜星",
+    "DIALOG": ["我...愿意加入罗德岛..."],
+    "MOVES": ["霜寒打击","重击","霜冻","凛冬已至"]
+  },
+  "${modID}:SnowMonsterTeamCaster": {
+    "NAME": "雪怪小队术士",
+    "DIALOG": [],
+    "MOVES": ["法术打击","冰霜护盾","雪怪小队集结!","霜冻打击"]
+  },
+  "${modID}:SnowMonsterTeamIceBreaker": {
+    "NAME": "雪怪小队凿冰者",
+    "DIALOG": [],
+    "MOVES": ["重击","切割","雪怪小队集结!"]
+  },
+  "${modID}:SnowMonsterTeamSoldier": {
+    "NAME": "雪怪小队战士",
+    "DIALOG": [],
+    "MOVES": ["打击","防御","雪怪小队集结!"]
+  },
+  "${modID}:MephistoSinger": {
+    "NAME": "梅菲斯特??",
+    "DIALOG": [],
+    "MOVES": ["打击","防御","雪怪小队集结!","","休眠"]
+  },
+  "${modID}:Mephisto": {
+    "NAME": "梅菲斯特",
+    "DIALOG": [],
+    "MOVES": ["弱化打击","治疗","强化","弱化","格挡","召唤"]
+  },
+  "${modID}:Faust": {
+  "NAME": "浮士德",
+  "DIALOG": [],
+  "MOVES": ["箭矢打击","双发箭矢","破甲箭","瞄准弱点"]
+},
+  "${modID}:ZombieScavenger": {
+    "NAME": "宿主流浪者",
+    "DIALOG": [],
+    "MOVES": ["打击","粉尘打击"]
+  },
+  "${modID}:ZombieSoldier": {
+    "NAME": "宿主士兵",
+    "DIALOG": [],
+    "MOVES": ["打击","防御"]
+  }
+
+}

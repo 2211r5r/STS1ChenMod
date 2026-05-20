@@ -1,0 +1,43 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:ChiXiaoRelic": {
+    "NAME": "源石技艺·赤霄",
+    "FLAVOR": "罗德岛制式剑",
+    "DESCRIPTIONS": [
+      "根据模组设置, 此遗物的效果会有不同: NL (1)每回合开始时, 获得 #b1 点 #y活力 (原版风格). NL (2)使用 #y技能牌 时, 失去 #b1 点生命, 获得 #b1 点 #y格挡 与 #y活力 .",
+      "每回合开始时，获得 #b1 点 #y活力 .",
+      "使用 #y技能牌 时，失去 #b1 点生命 (不会 #y致死 )，获得 #b1 点 #y活力 和 #b1 点 #y格挡 ."
+    ]
+  },
+  "${modID}:ChiXiaoPlusRelic": {
+    "NAME": "往昔时光·赤霄",
+    "FLAVOR": "力量好像回来了，不多，但够用.",
+    "DESCRIPTIONS": [
+      "根据模组设置, 此遗物的效果会有不同: NL (1)每 #b3 个回合开始时, 获得 #b1 点 #y力量 (原版风格). NL (2)每回合首次触发 #y源石技艺·赤霄 时，改为获得 #b1 点 #y力量 .",
+      "每 #b3 个回合，获得 #b1 点 #y力量 .",
+      "每回合首次触发 #y源石技艺·赤霄 时，改为获得 #b1 点 #y力量 ."
+    ]
+  },
+  "${modID}:JiYiCanYeRelic": {
+    "NAME": "记忆残页",
+    "FLAVOR": "岁乱平息，字伥就此消逝，只是，由它们造成的破坏，已经切实地留在了百灶。",
+    "DESCRIPTIONS": [
+      "回合结束时，对所有敌人免费造成 #b9X 点伤害( #bX 为剩余的能量), 可以战未来(触发“ #y化学物X ”)."
+    ]
+  },
+
+  "${modID}:SummerRelic": {
+    "NAME": "多索雷斯假日",
+    "FLAVOR": "陈在多索雷斯度假归来，身心愉悦，消费了一番。",
+    "DESCRIPTIONS": [
+      "每回合额外获得 #b1 点 [E] ；获得此遗物时要 #y氪金  #b648 块钱."
+    ]
+  }
+
+}

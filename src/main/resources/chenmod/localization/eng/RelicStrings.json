@@ -1,0 +1,39 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:ChiXiaoRelic": {
+    "NAME": "源石技艺·赤霄",
+    "FLAVOR": "罗德岛制式剑",
+    "DESCRIPTIONS": [
+      "你打出技能牌时, 失去 #b1 点生命(不会致死)，获得 #b1 点 #y力量."
+    ]
+  },
+  "${modID}:ChiXiaoPlusRelic": {
+    "NAME": "往昔时光·赤霄",
+    "FLAVOR": "力量好像回来了，不多，但够用.",
+    "DESCRIPTIONS": [
+      "替换 #y源石技艺·赤霄 ;你打出非攻击牌时, 失去 #b1 点生命(不会致死)，获得 #b1 点 #y力量."
+    ]
+  },
+  "${modID}:JiYiCanYeRelic": {
+    "NAME": "记忆残页",
+    "FLAVOR": "岁乱平息，字伥就此消逝，只是，由它们造成的破坏，已经切实地留在了百灶。",
+    "DESCRIPTIONS": [
+      "回合结束时，对所有敌人造成 #b10 X点伤害(X为剩余的能量,且不扣除), 可以战未来(触发“化学物X”)."
+    ]
+  },
+
+  "${modID}:SummerRelic": {
+    "NAME": "多索雷斯假日",
+    "FLAVOR": "陈在多索雷斯度假归来，身心愉悦，消费了一番。",
+    "DESCRIPTIONS": [
+      "每回合额外获得 #b1 点 [E] ；获得此遗物时要 #y氪金  #b648 块钱."
+    ]
+  }
+
+}

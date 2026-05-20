@@ -1,0 +1,145 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "打击",
+    "DESCRIPTION": "对单个敌人造成两次 !D! 点伤害.NL 第二行描述（可选）。",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:AttackCard": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成两次 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "造成两次 !D! 点伤害."
+  },
+  "${modID}:SlashCard": {
+    "NAME": "赤霄·拔刀",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害."
+  },
+  "${modID}:DefendCard": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 .",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 ."
+  },
+  "${modID}:JueYingCard": {
+    "NAME": "赤霄·绝影",
+    "DESCRIPTION": "获得 1 层 无实体 ; 对目标造成 !M! 次 !D! 点伤害. NL 若 ${modID}:击杀 了目标，随机选择一名其他存活敌人重复伤害流程 NL (总斩击次数不超过 !M! 次).",
+    "UPGRADE_DESCRIPTION": "获得 1 层 无实体 ; 对目标造成 !M! 次 !D! 点伤害. NL 若 ${odID}:击杀 了目标，随机选择一名其他存活敌人重复伤害流程."
+  },
+  "${modID}:QiaoJiCard": {
+    "NAME": "赤霄·剑鞘打击",
+    "DESCRIPTION": "造成 !D! 点伤害, NL 然后 击晕 该敌人.",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害, NL 然后 击晕 该敌人."
+  },
+  "${modID}:HeChiCard": {
+    "NAME": "呵斥",
+    "DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌."
+  },
+  "${modID}:BenYeCard": {
+    "NAME": "赤霄·奔夜",
+    "DESCRIPTION": "本回合内，使下一张攻击牌打出 !M! 次.",
+    "UPGRADE_DESCRIPTION": "使下一张攻击牌打出 !M! 次."
+  },
+  "${modID}:YinChaCard": {
+    "NAME": "三点几了!",
+    "DESCRIPTION": "回复 !M!X 点体力, NL 回复 1 点能量. NL 消耗",
+    "UPGRADE_DESCRIPTION": "回复 !M!X 点体力, NL 回复 X 点能量. NL 消耗"
+  },
+  "${modID}:LongMenJinWeiJuCard": {
+    "NAME": "龙门近卫局",
+    "DESCRIPTION": "提升 1 点 力量 , NL 提升 1 点 敏捷 , NL 获得 3 点 荆棘 , NL 获得 45 金币 .",
+    "UPGRADE_DESCRIPTION": "提升 2 点 力量 , NL 提升 2 点 敏捷 , NL 获得 6 点 荆棘 , NL 获得 90 金币 ."
+  },
+  "${modID}:LieZhenCard": {
+    "NAME": "全军列阵!",
+    "DESCRIPTION": "以任意方式失去的生命值-!M!点, NL 直到你的下回合开始.",
+    "UPGRADE_DESCRIPTION": "以任意方式失去的生命值-!M!点."
+  },
+  "${modID}:YuanShiBaoFaFormCard": {
+    "NAME": "源石爆发形态",
+    "DESCRIPTION": "虚无 . NL 每回合获得 !M! 张状态牌 NL 【源石爆发】.",
+    "UPGRADE_DESCRIPTION": "每回合获得 !M! 张状态牌 NL 【源石爆发】."
+  },
+  "${modID}:YuanShiBaoFaCard": {
+    "NAME": "源石爆发",
+    "DESCRIPTION": "不可被打出. NL 回合结束自动被打出. NL 失去当前生命值的 !M! %(会致死) , 对所有敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION": "不可被打出. NL 回合结束自动被打出. NL 失去当前生命值的 !M! %(会致死) , 对所有敌人造成 !D! 点伤害.",
+    "EXTENDED_DESCRIPTION": [
+      "不可被打出. NL 回合结束自动被打出. NL 失去当前生命值的 !M! %(!y!点) , 对所有敌人造成 !D! 点伤害.",
+      "不可被打出. NL 回合结束自动被打出. NL 失去当前生命值的 !M! %(!y!点) , 对所有敌人造成 !D! 点伤害."
+    ]
+  },
+  "${modID}:BaXiangYaoWuCard": {
+    "NAME": "靶向药物",
+    "DESCRIPTION": "${modID}:偷取 目标敌人最多!M!点正数 力量 .",
+    "UPGRADE_DESCRIPTION": "${modID}:偷取 目标敌人所有正数 力量 .",
+    "EXTENDED_DESCRIPTION": [
+      "目标没有可偷取的正数力量！",
+      " NL (升级后，可偷取全部正数力量)"
+    ]
+  },
+  "${modID}:PaperWorkCard": {
+    "NAME": "文书工作",
+    "DESCRIPTION": "摸 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "摸 !M! 张牌."
+  },
+  "${modID}:MoneyCard": {
+    "NAME": "钱!!!",
+    "DESCRIPTION": "造成相当于已有金钱数值的1/10的伤害. NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " NL (可造成 !D! 点伤害)"
+  },
+  "${modID}:XingChenDouShiCard": {
+    "NAME": "星陈斗士",
+    "DESCRIPTION": "获得 !M! 层金属化, 造成 !M! 次 !D! 点伤害",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层金属化, 造成 !M! 次 !D! 点伤害"
+  },
+  "${modID}:CooperationCard": {
+    "NAME": "并肩作战",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:BrokenScabbardCard": {
+    "NAME": "破碎剑鞘",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:TowerFierceCard": {
+    "NAME": "杀戮之塔",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:DoubleSwordsCard": {
+    "NAME": "影霄? 赤霄!!",
+    "DESCRIPTION": "在",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "${modID}:UnstoppableCard": {
+    "NAME": "势不可挡",
+    "DESCRIPTION": "消耗 抽牌堆的所有 ${modID}:防御 系技能牌, NL 每 消耗 一张获得 !M! 点 力量 .",
+    "UPGRADE_DESCRIPTION": "消耗 抽牌堆和弃牌堆的所有 ${modID}:防御 系技能牌, NL 每 消耗 一张获得 !M! 点 力量 ."
+  },
+  "${modID}:UnbreakableCard": {
+  "NAME": "坚不可摧",
+  "DESCRIPTION": "使用抽牌堆中 !M! 张 防御 系技能牌, 你的 格挡 不再消失.",
+  "UPGRADE_DESCRIPTION": "固有 . NL 使用抽牌堆中 !M! 张 防御 系技能牌, NL 你的 格挡 不再消失."
+  },
+  "${modID}:LiberationCard": {
+  "NAME": "赤霄·解放",
+  "DESCRIPTION": "在手牌区时，所有 ${modID}:赤霄 系攻击牌的伤害提高 !M! 点. NL 使用后, 将一张【赤霄·绝影】放入你的抽牌堆.",
+  "UPGRADE_DESCRIPTION": "使用后, 所有 ${modID}:赤霄 系攻击牌的伤害提高 !M! 点. NL 将一张【赤霄·绝影+】放入你的抽牌堆."
+  },
+  "${modID}:Defend_ChiXiaoCard": {
+    "NAME": "赤霄·格挡",
+    "DESCRIPTION": "抽到时,获得 !B! 点 格挡 . NL 使用后,获得 !M! 点 敏捷 .",
+    "UPGRADE_DESCRIPTION": "抽到时,获得 !B! 点 格挡 . NL 使用后,获得 !M! 点 敏捷 ."
+  },
+  "${modID}:FatedDualCard": {
+  "NAME": "宿命对决",
+  "DESCRIPTION": "",
+  "UPGRADE_DESCRIPTION": ""
+  }
+}

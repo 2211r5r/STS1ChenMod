@@ -1,0 +1,152 @@
+[
+  {
+    "PROPER_NAME": "This is displayed in the tooltip.",
+    "NAMES": [
+      "these",
+      "are",
+      "detected",
+      "in",
+      "the",
+      "text"
+    ],
+    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "multiword keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "Pink",
+    "NAMES": [
+      "pink"
+    ],
+    "DESCRIPTION": "Using the COLOR field, this keyword is colored pink instead of the normal keyword color.",
+    "COLOR": "fc83da"
+  },
+  {
+    "PROPER_NAME": "偷取",
+    "NAMES": ["偷取"],
+    "DESCRIPTION": "将目标的增益效果 #y移除 ，改为对自己 #y施加 等量的增益效果。",
+    "COLOR": "ff0000"
+  },
+  {
+    "PROPER_NAME": "击杀",
+    "NAMES": ["击杀"],
+    "DESCRIPTION": "攻击使得目标生命值降低至 #b0 及其以下时，视为造成了 #y击杀 ，无论其是否拥有 #y爪牙 ，都会继续触发后续的效果。",
+    "COLOR": "ff0000"
+  },
+  {
+    "PROPER_NAME": "击晕",
+    "NAMES": ["击晕"],
+    "DESCRIPTION": "将目标本回合的 #b意图 设置为 #y晕眩 ，即它什么都不会做。",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "赤霄",
+    "NAMES": ["赤霄","赤霄·收刀","赤霄·收刀+"],
+    "DESCRIPTION": "陈晖洁的知名佩剑，使用到 #r赤霄 的卡牌会标出。",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "防御",
+    "NAMES": ["防御"],
+    "DESCRIPTION": "为角色提供防御属性的卡牌，包括但不限于 #y格挡 , #y敏捷 , #y金属化 等等.",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "金属化",
+    "NAMES": ["金属化"],
+    "DESCRIPTION": "回合结束时，令持有者获得相当于 #y金属化 #b层数 的 #y格挡 .",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "多重护甲",
+    "NAMES": ["多重护甲"],
+    "DESCRIPTION": "回合结束时，令持有者获得相当于 #y多重护甲 #b层数 的 #y格挡 ,受到了损失生命值的攻击后, #b层数 -1.",
+    "COLOR": "ffff00"
+  },
+  {
+  "PROPER_NAME": "致死",
+  "NAMES": ["致死"],
+  "DESCRIPTION": "纵使角色只剩 #b1 点生命值时, 该 #y流失体力 的效果仍然至少造成 #b1 点伤害, 导致角色 #r死亡.",
+  "COLOR": "ffff00"
+},{
+  "PROPER_NAME": "赤霄·绝影",
+  "NAMES": ["赤霄·绝影","赤霄·绝影+"],
+  "DESCRIPTION": "陈的成名绝技，以 #y极其快速 的十连 #y无敌 斩击著称.",
+  "COLOR": "ffff00"
+},{
+  "PROPER_NAME": "源石爆发",
+  "NAMES": ["源石爆发","源石爆发+"],
+  "DESCRIPTION": "泰拉大陆上独有的 #b法术 类技能，使用该 #y源石技艺 会 #y极大幅度 地增加使用者的身心负担",
+  "COLOR": "ffff00"
+},{
+  "PROPER_NAME": "使用",
+  "NAMES": ["使用"],
+  "DESCRIPTION": "有些卡牌能够 #y使用 别的卡牌，这些被使用的牌会直接进入 #y处理区 等待被使用(不进入手牌区).",
+  "COLOR": "ffff00"
+},{
+  "PROPER_NAME": "活动肌肉",
+  "NAMES": ["活动肌肉"],
+  "DESCRIPTION": "你的回合结束时,失去等同于 #y活动肌肉 #b层数 的 #y力量.",
+  "COLOR": "ffff00"
+},
+  {
+    "PROPER_NAME": "敏捷下降",
+    "NAMES": ["敏捷下降"],
+    "DESCRIPTION": "你的回合结束时,失去等同于 #y敏捷下降 #b层数 的 #y敏捷.",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "消耗血量打出",
+    "NAMES": ["消耗血量打出"],
+    "DESCRIPTION": "你的当前能量 #y小于 此牌所需的能量时, 可以流失血量来补齐能量的差额.",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "破甲",
+    "NAMES": ["破甲","破甲攻击","破甲伤害"],
+    "DESCRIPTION": "造成伤害时，额外附带相当于目标格挡值 #y一定倍率 的伤害(默认倍率为 #b75% ).",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "多段攻击·多次攻击",
+    "NAMES": ["多段攻击","多次攻击"],
+    "DESCRIPTION": "陈的剑术以多段攻击次数著称。有多段攻击的卡牌包括但不限于: #y打击、 #y赤霄·绝影 、 #y星陈斗士 .",
+    "COLOR": "ffff00"
+  },{
+  "PROPER_NAME": "烛光打击",
+  "NAMES": ["烛光打击","烛光打击+","赤霄·烛光打击","赤霄·烛光打击+"],
+  "DESCRIPTION": "作为伺烛客，烛光照耀着前路. 获得 #y能量 .",
+  "COLOR": "ffff00"
+},
+  {
+    "PROPER_NAME": "乌尔比安的助力",
+    "NAMES": ["乌尔比安的助力"],
+    "DESCRIPTION": " #b深海猎人 乌尔比安，前来助战.受到伤害时可以恢复生命值.",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "琉璃壁",
+    "NAMES": ["琉璃壁", "刷新琉璃壁"],
+    "DESCRIPTION": "灰色的林, 前来助战. 不再损失生命，改为将损失的生命在玩家的下回合延迟结算并对全体敌人 #y反伤 . #y刷新琉璃壁 会使此能力层数变为 #b0 层.",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "锁定",
+    "NAMES": ["锁定", "锁定至"],
+    "DESCRIPTION": "当前生命值不超过一定的比例, 若在大于锁定值的区间受到了 #y回复生命 的效果, 改为获得等数量 #y格挡 .",
+    "COLOR": "ffff00"
+  },
+  {
+    "PROPER_NAME": "距离",
+    "NAMES": ["近距离", "远距离"],
+    "DESCRIPTION": "有些卡牌会计算 #y目标单位 与 #b玩家角色 之间的距离, 使卡牌对距离 #y越近 或者 #y越远 的目标的伤害变高.",
+    "COLOR": "ffff00"
+  }
+]
