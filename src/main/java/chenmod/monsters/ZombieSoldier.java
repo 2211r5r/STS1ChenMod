@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenerateMonsterPower;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -188,7 +189,6 @@ public class ZombieSoldier extends AbstractMonster {
                 break;
 
         }
-        AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.recoverAfterTurn));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RollMoveAction(this));
     }
 
@@ -215,6 +215,11 @@ public class ZombieSoldier extends AbstractMonster {
             state38.setAnimation(0,"Die", false);
         }
         super.die();
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, this.recoverAfterTurn), this.recoverAfterTurn));
     }
 
 }

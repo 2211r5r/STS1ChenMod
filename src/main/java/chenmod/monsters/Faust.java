@@ -255,8 +255,8 @@ public class Faust extends AbstractMonster {
     protected void getMove(int num) {
 
         boolean isTimeToNormal = AbstractDungeon.ascensionLevel >= 19
-                ? this.reviveCounter > 4
-                : this.reviveCounter > 3;
+                ? this.reviveCounter > 3
+                : this.reviveCounter > 2;
 
         if (isTimeToNormal) {
             if(this.posture == Posture.REVIVE){

@@ -3,13 +3,8 @@ package chenmod.actions;
 import chenmod.character.ChenCharacter;
 import chenmod.util.Sounds;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
@@ -34,34 +29,30 @@ public class YunLieAction extends AbstractGameAction {
     @Override
     public void update() {
 
-        if(isFirstEffect){
-            if (player instanceof ChenCharacter) {
-                // 第二步：安全强转（100%不会报错）
-                CardCrawlGame.sound.play(Sounds.attackVoice_9);
-
-                ChenCharacter p = (ChenCharacter) player;
-
-                p.changeSpine38ToChen3(()->{
-
-                    p.useSkillAttackAnimation();
-
-                    for (int i = 0; i<this.magicNumber;i++){
-                        this.addToBot(new AttackDamageRandomEnemyAction(this.card, AbstractGameAction.AttackEffect.LIGHTNING));
-                    }
-
-                    this.isDone = true;
-                });
-
-            }else{
-
-                for (int i = 0; i<this.magicNumber;i++){
-                    this.addToBot(new AttackDamageRandomEnemyAction(this.card, AbstractGameAction.AttackEffect.LIGHTNING));
-                }
-
-                this.isDone = true;
-            }
-
-            isFirstEffect = false;
-        }
+//        if(isFirstEffect){
+//            if (player instanceof ChenCharacter) {
+//                // 第二步：安全强转（100%不会报错）
+//                CardCrawlGame.sound.play(Sounds.attackVoice_9);
+//
+//                ChenCharacter p = (ChenCharacter) player;
+//
+//                p.changeSpine38ToChen3(()->{
+//
+//                    p.useSkillAttackAnimation();
+//
+//                    this.addToBot(new YunLieAttackDamageRandomEnemyAction(this.card, this.magicNumber));
+//
+//                    this.isDone = true;
+//                });
+//
+//            }else{
+//
+//                this.addToBot(new YunLieAttackDamageRandomEnemyAction(this.card, this.magicNumber));
+//
+//                this.isDone = true;
+//            }
+//
+//            isFirstEffect = false;
+//        }
     }
 }

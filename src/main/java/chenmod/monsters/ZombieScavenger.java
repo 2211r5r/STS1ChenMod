@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenerateMonsterPower;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -167,26 +168,37 @@ public class ZombieScavenger extends AbstractMonster {
     @Override
     public void takeTurn() {
 
-        if (state38 != null) {
-            state38.setAnimation(0,"Attack", false);
-            state38.addAnimation(0, "Idle", true, 0.0f);
-        }
-
         switch (this.nextMove){
 
             case 1: //  攻击
                 this.skillAttack ++;
+
+                if (state38 != null) {
+                    state38.setAnimation(0,"Attack", false);
+                    state38.addAnimation(0, "Idle", true, 0.0f);
+                }
+
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_HEAVY));
                 break ;
 
             case 2: // 粉尘打击
+
+                if (state38 != null) {
+                    state38.setAnimation(0,"Attack", false);
+                    state38.addAnimation(0, "Idle", true, 0.0f);
+                }
+
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DustPower(AbstractDungeon.player, 1), 1));
+
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DustPower(AbstractDungeon.player, 5), 5));
+                }else{
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DustPower(AbstractDungeon.player, 3), 3));
+                }
                 this.skillAttack = 0;
                 break;
 
         }
-        AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.recoverAfterTurn));
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RollMoveAction(this));
     }
 
@@ -213,6 +225,11 @@ public class ZombieScavenger extends AbstractMonster {
             state38.setAnimation(0,"Die", false);
         }
         super.die();
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new RegenerateMonsterPower(this, this.recoverAfterTurn), this.recoverAfterTurn));
     }
 
 }

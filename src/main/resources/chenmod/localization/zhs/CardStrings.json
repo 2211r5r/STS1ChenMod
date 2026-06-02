@@ -36,8 +36,8 @@
   },
   "${modID}:HeChiCard": {
     "NAME": "呵斥",
-    "DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌.",
-    "UPGRADE_DESCRIPTION": "获得 1 点 [E] , NL 抽 !M! 张牌."
+    "DESCRIPTION": "获得 1 点 [E] ， NL 抽 !M! 张牌， NL 此牌本回合费用+1。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 [E] ， NL 抽 !M! 张牌， NL 此牌本回合费用+1。"
   },
   "${modID}:BenYeCard": {
     "NAME": "赤霄·奔夜",
@@ -110,10 +110,10 @@
   },
   "${modID}:RoaringFlareCard": {
     "NAME": "怒号光明",
-    "DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, 摸等同于消耗血量的数量的牌并获得等量 [E] . 消耗 ",
-    "UPGRADE_DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, 摸等同于消耗血量的数量的牌并获得等量 [E]. 消耗 .",
+    "DESCRIPTION": " ${modID}:可消耗血量打出 , NL 摸等同于消耗血量的数量的牌并获得等量 [E] . 消耗 ",
+    "UPGRADE_DESCRIPTION": " ${modID}:可消耗血量打出 , NL 摸等同于消耗血量的数量的牌并获得等量 [E] . 消耗 .",
     "EXTENDED_DESCRIPTION": [
-      "你可以 ${modID}:消耗血量打出 此牌, 摸 %d 张牌并获得 %d 点 [E] . 消耗 ."
+      " ${modID}:可消耗血量打出 , NL 摸 %d 张牌并获得 %d 点 [E] . 消耗 ."
     ]
   },
   "${modID}:DoubleSwordsCard": {
@@ -128,8 +128,8 @@
   },
   "${modID}:UnbreakableCard": {
   "NAME": "坚不可摧",
-  "DESCRIPTION": "使用抽牌堆中 !M! 张 ${modID}:防御 技能牌, 你的 格挡 不再消失.",
-  "UPGRADE_DESCRIPTION": "固有 . NL 使用抽牌堆中 !M! 张 ${modID}:防御 技能牌, NL 你的 格挡 不再消失."
+  "DESCRIPTION": "${modID}:使用 抽牌堆中 !M! 张 ${modID}:防御 技能牌, 你的 格挡 不再消失.",
+  "UPGRADE_DESCRIPTION": "固有 . NL ${modID}:使用 抽牌堆中 !M! 张 ${modID}:防御 技能牌, NL 你的 格挡 不再消失."
   },
   "${modID}:LiberationCard": {
   "NAME": "赤霄·解放",
@@ -143,10 +143,10 @@
   },
   "${modID}:FatedDualCard": {
   "NAME": "宿命对决",
-  "DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
-  "UPGRADE_DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
+  "DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL ${modID}:可消耗血量打出 . NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
+  "UPGRADE_DESCRIPTION": "手中每一张其他攻击牌使此牌费用+1. NL ${modID}:可消耗血量打出 . NL 造成 !D! 点伤害, 每流失1点血量额外造成 !M! 点伤害.",
   "EXTENDED_DESCRIPTION": [
-    "手中每一张其他攻击牌使此牌费用+1. NL 你可以 ${modID}:消耗血量打出 此牌. NL 造成 !D! 点伤害.",
+    "手中每一张其他攻击牌使此牌费用+1. NL ${modID}:可消耗血量打出 . NL 造成 !D! 点伤害.",
     " NL (会流失 %d 点血量 NL 额外造成 %d 点伤害)"
   ]
   },
@@ -184,8 +184,8 @@
   },
   "${modID}:FerociousCard": {
     "NAME": "凶恶",
-    "DESCRIPTION": "每回合首次获得其他增益状态时,摸 !M! 张牌.",
-    "UPGRADE_DESCRIPTION": "每回合首次获得其他增益状态时,摸 !M! 张牌."
+    "DESCRIPTION": "每回合首次获得一种增益状态时,摸 !M! 张牌.",
+    "UPGRADE_DESCRIPTION": "每回合首次获得一种增益状态时,摸 !M! 张牌."
   },
   "${modID}:ReformationCard": {
     "NAME": "重整精神",
@@ -214,8 +214,8 @@
   },
   "${modID}:TheBirthOfTragedyCard": {
     "NAME": "苦难摇篮",
-    "DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
-    "UPGRADE_DESCRIPTION": "你可以 ${modID}:消耗血量打出 此牌, NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
+    "DESCRIPTION": " ${modID}:可消耗血量打出 , NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
+    "UPGRADE_DESCRIPTION": " ${modID}:可消耗血量打出 , NL 每失去1点生命打出抽牌堆顶的 !M! 张牌(此牌除外).",
     "EXTENDED_DESCRIPTION": [
       " NL (失去 %d 点生命)."
     ]
@@ -261,8 +261,8 @@
   },
   "${modID}:DustCard": {
     "NAME": "源石粉尘",
-    "DESCRIPTION": "回合结束时，若此牌在你手中，你失去 !M! 点体力. 使用后, 消耗 . 被 消耗 后, 摸 !M! 张牌.",
-    "UPGRADE_DESCRIPTION": "回合结束时，若此牌在你手中，你失去 !M! 点体力. 使用后, 消耗 . 被 消耗 后, 摸 !M! 张牌."
+    "DESCRIPTION": "在你的回合结束时，你失去 !M! 点体力。 NL 被 消耗 后, 获得 1 层 ${modID}:粉尘 。 消耗 。",
+    "UPGRADE_DESCRIPTION": "在你的回合结束时，你失去 !M! 点体力。 NL 被 消耗 后, 获得 1 层 ${modID}:粉尘 。 消耗 。"
   },
   "${modID}:BeforeActionCard": {
     "NAME": "行动准备",
@@ -280,7 +280,7 @@
   "${modID}:CandleLightFormCard": {
     "NAME": "伺烛形态",
     "DESCRIPTION": "每回合抽牌后，获得 !M! 张 ${modID}:赤霄·烛光打击 .",
-    "UPGRADE_DESCRIPTION": "每回合抽牌后，获得 !M! 张 ${modID}:赤霄·烛光打击+ ."
+    "UPGRADE_DESCRIPTION": "每回合抽牌后，获得 !M! 张 ${modID}:赤霄·烛光打击 . NL 获得 [E] ."
   },
   "${modID}:CandleLightAttackCard": {
     "NAME": "赤霄·烛光打击",
@@ -421,7 +421,7 @@
   "${modID}:StorageCard": {
     "NAME": "赤霄·收刀",
     "DESCRIPTION": "摸 !M! 张牌. NL 消耗 .",
-    "UPGRADE_DESCRIPTION": "摸 !M! 张牌. NL 消耗 ."
+    "UPGRADE_DESCRIPTION": "摸 !M! 张牌, NL 获得 !M! 点 活力 . NL 消耗 ."
   },
   "${modID}:TouristCard": {
     "NAME": "女游客C的反击",
@@ -442,5 +442,45 @@
     "NAME": "抉择，抉择",
     "DESCRIPTION": "虚无 . NL 选择手牌中的一张牌，将其费用于本场战斗中变为0. 消耗 .",
     "UPGRADE_DESCRIPTION": "保留 . NL 选择手牌中的一张牌，将其费用于本场战斗中变为0. 消耗 ."
+  },
+  "${modID}:CuttingLeavesCard": {
+    "NAME": "赤霄·斩叶飞花",
+    "DESCRIPTION": " ${modID}:可消耗血量打出 , NL 造成 !D! 点伤害 !M! 次. NL 将此牌返回手中并使其本回合费用+1.",
+    "UPGRADE_DESCRIPTION": " ${modID}:可消耗血量打出 , NL 造成 !D! 点伤害 !M! 次. NL 将此牌返回手中并使其本回合费用+1."
+  },
+  "${modID}:PursuitCard": {
+    "NAME": "追捕",
+    "DESCRIPTION": "给予 !M! 层 易伤 , NL 给予 !M! 层 虚弱 . NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 , NL 给予 !M! 层 虚弱 . NL 摸 !M! 张牌并获得 [E] , NL 消耗 ."
+  },
+  "${modID}:BridgeCard": {
+    "NAME": "赤霄·承启",
+    "DESCRIPTION": "回合开始时，向手牌中添加一张 ${modID}:赤霄 牌.",
+    "UPGRADE_DESCRIPTION": "回合开始时，向手牌中添加一张 ${modID}:赤霄 牌."
+  },
+  "${modID}:NewReunionCard": {
+    "NAME": "新的整合",
+    "DESCRIPTION": "消耗 所有手牌，若 消耗 了 9 张其他手牌，将手牌摸至上限. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "消耗 所有手牌，若 消耗 了 9 张其他手牌，将手牌摸至上限. NL 消耗 ."
+  },
+  "${modID}:InnerPeaceCard": {
+    "NAME": "赤霄·心如止水",
+    "DESCRIPTION": "抽到时，获得 [E] 并多抽 !M! 张牌。被 消耗 后，获得 !B! 点 格挡 . NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽到时，获得 [E] 并多抽 !M! 张牌。被 消耗 后，获得 !B! 点 格挡 . NL 消耗 。"
+  },
+  "${modID}:PerfectedSlashCard": {
+    "NAME": "赤霄·完美斩",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 你每有一张 ${modID}:赤霄 牌，伤害+!M!.",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 你每有一张 ${modID}:赤霄 牌，伤害+!M!."
+  },
+  "${modID}:SwiftStepsCard": {
+    "NAME": "迅捷步伐",
+    "DESCRIPTION": "每从抽牌堆中抽到 9 张牌，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "每从抽牌堆中抽到 9 张牌，获得 [E] 。"
+  },
+  "${modID}:FightingSpiritCard": {
+    "NAME": "战鼓",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 回合开始时，使用并 消耗 牌堆顶的 1 张牌.",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 回合开始时，使用并 消耗 牌堆顶的 1 张牌."
   }
 }

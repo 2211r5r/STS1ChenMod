@@ -16,7 +16,7 @@ public class HaiSiPowerCard extends BaseCard{
     public static final String ID = makeID(HaiSiPowerCard.class.getSimpleName());
     // 卡牌基础属性配置
     private static final CardStats info = new CardStats(
-            ChenCharacter.Meta.CARD_COLOR, // 卡牌颜色
+            CardColor.COLORLESS, // 卡牌颜色
             CardType.POWER, // 卡牌类型
             CardRarity.UNCOMMON, // 稀有度
             CardTarget.SELF, // 目标

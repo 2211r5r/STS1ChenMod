@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PainfulStabsPower;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -43,8 +44,8 @@ public class SnowMonsterTeamIceBreaker extends AbstractMonster{
     // --- 角色基础属性 ---
     private static final int MAX_HP = 120;
 
-    private static final int ATTACK_DAMAGE = 7;
-    private static final int STRONGTH_ATTACK_DAMAGE = 12;
+    private static final int ATTACK_DAMAGE = 9;
+    private static final int STRONGTH_ATTACK_DAMAGE = 13;
 
     public SnowMonsterTeamIceBreaker(float offsetX, float offsetY) {
         super(monsterStrings.NAME, ID, MAX_HP, 0.0F, 0.0F, 220.0F, 300.0F, null, offsetX, offsetY);
@@ -166,11 +167,7 @@ public class SnowMonsterTeamIceBreaker extends AbstractMonster{
                 }
 
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-                if (AbstractDungeon.ascensionLevel >= 18) {
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAndDeckAction(new Wound()));
-                }else{
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Wound(), 1));
-                }
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, PainfulStabsPower.POWER_ID));
 
                 break;
             }
@@ -205,19 +202,21 @@ public class SnowMonsterTeamIceBreaker extends AbstractMonster{
         if (AbstractDungeon.ascensionLevel >= 18) {
             if (!this.lastMove((byte)2) && !this.lastMoveBefore((byte)2)) {
                 this.setMove(monsterStrings.MOVES[1], (byte)2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PainfulStabsPower(this)));
                 return;
             }
         }
         else {
             if (num < 33) {
-
                 this.setMove(monsterStrings.MOVES[1], (byte)2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
-
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PainfulStabsPower(this)));
                 return;
             }
         }
         if (this.lastTwoMoves((byte)1)) {
             this.setMove(monsterStrings.MOVES[1], (byte)2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PainfulStabsPower(this)));
+
         }
         else {
             this.setMove(monsterStrings.MOVES[0],(byte)1, Intent.ATTACK, this.damage.get(0).base);

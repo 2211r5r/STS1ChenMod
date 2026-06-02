@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class IronFlowerPower extends BasePower {
@@ -25,7 +26,6 @@ public class IronFlowerPower extends BasePower {
 
     public IronFlowerPower(AbstractCreature owner, final int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, Math.max(1, amount));
-        updateDescription();
     }
 
     @Override
@@ -39,9 +39,8 @@ public class IronFlowerPower extends BasePower {
     @Override
     public void onAttack(final DamageInfo info, final int damageAmount, final AbstractCreature target) {
         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
-            this.flash();
+            this.flashWithoutSound();
             this.owner.heal(this.amount);
-            updateDescription();
         }
     }
 
@@ -49,11 +48,17 @@ public class IronFlowerPower extends BasePower {
     public int onHeal(int healAmount) {
 
         if (this.owner.currentHealth > (int)(this.owner.maxHealth * 0.5f)){
-            this.flash();
+            this.flashWithoutSound();
             this.owner.addBlock(healAmount);
             return 0;
         }
 
         return healAmount;
+    }
+
+    @Override
+    public void update(int slot){
+        super.update(slot);
+        updateDescription();
     }
 }

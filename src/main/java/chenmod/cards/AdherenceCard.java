@@ -19,7 +19,7 @@ public class AdherenceCard extends BaseCard {
     private static final int COST = 2;
 
     private static final CardStats info = new CardStats(
-            ChenCharacter.Meta.CARD_COLOR, TYPE, RARITY, TARGET, COST
+            CardColor.COLORLESS, TYPE, RARITY, TARGET, COST
     );
 
     public AdherenceCard() {

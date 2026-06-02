@@ -85,7 +85,7 @@ public class SlashPlusCard extends BaseCard {
         if(power != null && power.amount > 0) {
             this.addToBot(
                     new DoubleSwordsAction(
-                            new DamageInfo(AbstractDungeon.player, power.amount, DamageInfo.DamageType.NORMAL)
+                            new DamageInfo(AbstractDungeon.player, power.amount, DamageInfo.DamageType.THORNS)
                     ));
         }
     }

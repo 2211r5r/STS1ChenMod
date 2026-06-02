@@ -61,6 +61,50 @@
     "NAME": "宿主士兵",
     "DIALOG": [],
     "MOVES": ["打击","防御"]
+  },
+  "${modID}:ZombieSarkazCenturion": {
+    "NAME": "萨卡兹宿主百夫长",
+    "DIALOG": [],
+    "MOVES": ["打击","粉尘痛击","生命汲取","强化"]
+  },
+  "${modID}:FranticZombieSoldier": {
+    "NAME": "狂暴宿主组长",
+    "DIALOG": [],
+    "MOVES": ["狂暴打击","狂暴强化"]
+  },
+  "${modID}:FranticZombieHurler": {
+    "NAME": "狂暴宿主掷骨手",
+    "DIALOG": [],
+    "MOVES": ["狂暴掷骨","狂暴强化"]
+  },
+  "${modID}:MercenarySarkazCaster": {
+    "NAME": "雇佣军萨卡兹术士",
+    "DIALOG": [],
+    "MOVES": ["给予脆弱","死亡律动","强化","燃烧自我"]
+  },
+  "${modID}:MercenarySarkazSoldier": {
+    "NAME": "雇佣军萨卡兹战士",
+    "DIALOG": [],
+    "MOVES": ["打击","连续爪击","燃烧自我"]
+  },
+  "${modID}:GuerrillaSoldier": {
+    "NAME": "游击队战士",
+    "DIALOG": [],
+    "MOVES": ["打击","掩护友军"]
+  },
+  "${modID}:GuerrillaSniper": {
+    "NAME": "游击队狙击手",
+    "DIALOG": [],
+    "MOVES": ["打击","瞄准弱点","重击","火力掩护"]
+  },
+  "${modID}:GuerrillaHerald": {
+    "NAME": "游击队传令兵",
+    "DIALOG": [],
+    "MOVES": ["打击","传令","士气大涨"]
+  },
+  "${modID}:GuerrillaArtilleryman": {
+    "NAME": "游击队炮兵",
+    "DIALOG": [],
+    "MOVES": ["炮弹打击","火焰弹","火力压制"]
   }
-
 }

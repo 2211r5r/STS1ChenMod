@@ -6,6 +6,7 @@ import chenmod.util.CardStats;
 import chenmod.util.ChenModConfig;
 import chenmod.util.Sounds;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,7 +31,7 @@ public class CandleLightFormCard extends BaseCard {
     public CandleLightFormCard() {
         super(ID, info);
         setMagic(MAGIC);
-        this.cardsToPreview =  new CandleLightAttackCard(upgraded);
+        this.cardsToPreview =  new CandleLightAttackCard(false);
     }
 
     @Override
@@ -39,14 +40,18 @@ public class CandleLightFormCard extends BaseCard {
         CardCrawlGame.sound.play(Sounds.getRandomVoiceString(Sounds.powerVoicePool3));
 
         this.addToBot(new ApplyPowerAction(p, p,
-                new CandleLightFormPower(p, this.magicNumber, this.upgraded), this.magicNumber));
+                new CandleLightFormPower(p, this.magicNumber, false), this.magicNumber));
 
-        CandleLightFormPower power = p.hasPower(CandleLightFormPower.POWER_ID)
-                ? (CandleLightFormPower) p.getPower(CandleLightFormPower.POWER_ID) : null;
+//        CandleLightFormPower power = p.hasPower(CandleLightFormPower.POWER_ID)
+//                ? (CandleLightFormPower) p.getPower(CandleLightFormPower.POWER_ID) : null;
+//
+//        if (power != null && this.upgraded) {
+//            power.isUpgraded = true;
+//            power.updateDescription();
+//        }
 
-        if (power != null && this.upgraded) {
-            power.isUpgraded = true;
-            power.updateDescription();
+        if(this.upgraded){
+            this.addToBot(new GainEnergyAction(1));
         }
 
     }
@@ -59,11 +64,6 @@ public class CandleLightFormCard extends BaseCard {
 
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
-
-            // 关键：升级预览卡牌
-            if (this.cardsToPreview != null && !this.cardsToPreview.upgraded) {
-                this.cardsToPreview.upgrade();
-            }
         }
     }
 

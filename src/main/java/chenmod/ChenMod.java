@@ -122,6 +122,31 @@ public class ChenMod implements
 
 
         // 注册事件与怪物
+        // 0.14 版本新添加
+
+        // 第四层的精英
+        BaseMod.addMonster("Mercenary Sarkaz",() -> new MonsterGroup(new AbstractMonster[] {
+                new MercenarySarkazSoldier(-150.0f, 0.0f),
+                new MercenarySarkazCaster(150.0f , 0.0f),
+        }));
+
+        // 第三层的精英:狂暴宿主和狂暴掷骨手
+        BaseMod.addMonster("Frantic Zombies",() -> new MonsterGroup(new AbstractMonster[] {
+                new FranticZombieSoldier(-150.0f, 0.0f),
+                new FranticZombieHurler(150.0f , 0.0f),
+        }));
+
+        // 第三层的精英:萨卡兹宿主百夫长
+        BaseMod.addMonster("Zombie Sarkaz Centurion", () -> new ZombieSarkazCenturion(0.0f, 0.0f));
+
+        // 第三层的精英:游击队军团 Guerrilla Team
+        BaseMod.addMonster("Guerrilla Team",() -> new MonsterGroup(new AbstractMonster[] {
+                new ShieldGuard(-350.0f , 0.0f),
+                new GuerrillaArtilleryman(-125.0f , 0.0f),
+                new GuerrillaSniper(100.0f , 0.0f),
+                new GuerrillaHerald(325.0f , 0.0f),
+        }));
+        // 0.13 版本就有的敌人单位
 
         BaseMod.addEvent(TowerFierceEvent.ID, TowerFierceEvent.class, Exordium.ID);
 
@@ -478,35 +503,40 @@ public class ChenMod implements
             return;
         }
 
+        DistanceCache.rebuild();
+
         for(AbstractMonster monster: abstractRoom.monsters.monsters){
             if(Objects.equals(monster.id, Buldrokkastee.ID)){
                 CardCrawlGame.music.playTempBGM(Sounds.bossBuldrokkasteeBGM);
-                break;
+                return;
             }
 
             if(Objects.equals(monster.id, Talulah.ID)){
                 CardCrawlGame.music.playTempBGM(Sounds.TalulahBGM_1);
-                break;
+                return;
             }
 
             if(Objects.equals(monster.id, FrostNova.ID)){
                 CardCrawlGame.music.playTempBGM(Sounds.FrostNovaBGM_1);
-                break;
+                return;
             }
 
             if(Objects.equals(monster.id, MephistoSinger.ID)){
                 CardCrawlGame.music.playTempBGM(Sounds.MephistoSingerBGM);
-                break;
+                return;
             }
 
             if(Objects.equals(monster.id, Mephisto.ID) || Objects.equals(monster.id, Faust.ID)){
                 CardCrawlGame.music.playTempBGM(Sounds.MephistoFaustBGM);
-                break;
+                return;
+            }
+
+            if(Objects.equals(monster.id, ShieldGuard.ID)){
+                CardCrawlGame.music.playTempBGM(Sounds.beforeTalulahBGM);
+                return;
             }
 
         }
-
-        DistanceCache.rebuild();
     }
 
 }

@@ -45,6 +45,7 @@ public class BaXiangYaoWuCard extends BaseCard {
 
         CardCrawlGame.sound.play(Sounds.getRandomVoiceString(Sounds.skillVoicePool));
 
+        int allTotelEnemyStrength = 0;
         for (AbstractMonster targetMonster : AbstractDungeon.getCurrRoom().monsters.monsters){
             int enemyStrength = 0;
             if (targetMonster.hasPower(StrengthPower.POWER_ID)) {
@@ -69,13 +70,18 @@ public class BaXiangYaoWuCard extends BaseCard {
                     this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, stealAmount), stealAmount, AbstractGameAction.AttackEffect.NONE));
                     // 可选：偷取成功音效
                     CardCrawlGame.sound.play("POWER_STRENGTH", 0.1f);
+
+                    allTotelEnemyStrength += stealAmount;
                 }
 
-            }else{
-                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 1.8f, cardStrings.EXTENDED_DESCRIPTION[0], true));
             }
 
         }
+
+        if(allTotelEnemyStrength <= 0){
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 1.8f, cardStrings.EXTENDED_DESCRIPTION[0], true));
+        }
+
     }
 
     // 卡牌升级逻辑

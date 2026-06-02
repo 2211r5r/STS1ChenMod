@@ -55,9 +55,9 @@ public class MephistoSinger extends AbstractMonster {
 
     private static final int MAX_HP = 400;
 
-    private static final int ATTACK_DAMAGE = 16;
+    private static final int ATTACK_DAMAGE = 21;
 
-    private static final int ATTACK_DAMAGE_2 = 7;
+    private static final int ATTACK_DAMAGE_2 = 9;
 
     private static final int REVIVE_MAX_TURN= 3;
 
@@ -211,10 +211,12 @@ public class MephistoSinger extends AbstractMonster {
     @Override
     public void takeTurn() {
 
+        this.healCooldown--;
+
         Label_NextMove:{
             switch (this.nextMove) {
                 case 1: // 攻击
-                    this.healCooldown--;
+
                     AbstractDungeon.effectList.add(
                             new TextAboveCreatureEffect(
                                     this.hb.cX,
@@ -235,7 +237,7 @@ public class MephistoSinger extends AbstractMonster {
                     break;
 
                 case 2: // 攻击
-                    this.healCooldown--;
+
                     AbstractDungeon.effectList.add(
                             new TextAboveCreatureEffect(
                                     this.hb.cX,
@@ -256,7 +258,6 @@ public class MephistoSinger extends AbstractMonster {
                     break;
 
                 case 3: // 技能攻击
-                    this.healCooldown--;
 
                     if (state38!=null){
                         state38.setAnimation(0,"Skill_2", false);
@@ -276,14 +277,16 @@ public class MephistoSinger extends AbstractMonster {
                     for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                         if (!m.isDead && !m.isDying) {
                             AbstractDungeon.actionManager.addToBottom(new HealAction(m, m, (int) ((m.maxHealth - m.currentHealth) * 0.15f )));
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new StrengthPower(m, 2), 2));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new StrengthPower(m, 3), 3));
                         }
                     }
+
+                    this.healCooldown = 4;
 
                     break;
 
                 case 5:
-                    this.healCooldown--;
+
                     if (state38!=null){
                         state38.setAnimation(0,"Skill_2", false);
                         state38.addAnimation(0, "Idle", true, 0.0f);
@@ -299,7 +302,6 @@ public class MephistoSinger extends AbstractMonster {
                 case 6: // 复活阶段
 
                     this.reviveCounter++;
-                    this.healCooldown--;
                     this.halfDead =false;
 
                     if(this.reviveCounter >= REVIVE_MAX_TURN){
@@ -388,7 +390,7 @@ public class MephistoSinger extends AbstractMonster {
         }
 
         // case 4 Debuff：只有玩家有 DustPower 时才可能出现
-        if (AbstractDungeon.player.hasPower(DustPower.POWER_ID) && AbstractDungeon.player.currentHealth > 2) {
+        if (AbstractDungeon.player.hasPower(DustPower.POWER_ID) && AbstractDungeon.player.currentHealth > 1) {
             possibleMoves.add((byte)5);
         }
 
@@ -403,11 +405,6 @@ public class MephistoSinger extends AbstractMonster {
         // 随机选择一个行为
         int index = num % possibleMoves.size();
         byte move = possibleMoves.get(index);
-
-        // 如果选择了回复行为，设置冷却
-        if (move == 3) {
-            this.healCooldown = 2; // 二回合冷却
-        }
 
         // 设置怪物意图
         switch (move) {
@@ -444,6 +441,9 @@ public class MephistoSinger extends AbstractMonster {
         if (this.currentHealth <= (int) (this.maxHealth * this.hpPhase.get(currentHpPhase)) && !this.halfDead) {
 
             AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, (int) (this.maxHealth * this.hpPhase.get(currentHpPhase) - this.currentHealth)));
+            // 添加对玩家的debuff
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DustPower(AbstractDungeon.player, 2+this.currentHpPhase), 2+this.currentHpPhase));
+            ChenMod.logger.info("【梅菲斯特·歌者】的血量阶段为："+(this.currentHpPhase)+" 释放技能debuff"+",总阶段为："+this.hpPhase.size());
 
             // 进入复活阶段
             this.halfDead = true;
@@ -466,9 +466,6 @@ public class MephistoSinger extends AbstractMonster {
                 }
             }
 
-            // 添加对玩家的debuff
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new DustPower(AbstractDungeon.player, 2+this.currentHpPhase), 2+this.currentHpPhase));
-            ChenMod.logger.info("【梅菲斯特·歌者】的血量阶段为："+(this.currentHpPhase)+" 释放技能debuff"+",总阶段为："+this.hpPhase.size());
         }
     }
 

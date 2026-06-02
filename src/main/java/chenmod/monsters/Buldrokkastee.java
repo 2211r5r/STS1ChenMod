@@ -25,10 +25,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.MetallicizePower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
@@ -62,8 +59,6 @@ public class Buldrokkastee extends AbstractMonster {
     // *** Spine38 结束
 
     private static final int MAX_HP = 300;
-    private static final int STR_AMT = 2;
-    private static final int MARCH_BLOCK = 15;
 
     private static final int ATTACK_DAMAGE = 3;
 
@@ -80,6 +75,12 @@ public class Buldrokkastee extends AbstractMonster {
     private int marchCounter = 4;  //  行军回合计数，五个回合后向前移动一点
 
     private int skillCounter = 0;
+
+    private int breakBlockAmt;
+
+    private final int metallicizeAmt;
+
+    private final int marchBlockAmt;
 
     private static final float MARCH_SPEED = 0.7f;
 
@@ -110,22 +111,31 @@ public class Buldrokkastee extends AbstractMonster {
 
         this.flipHorizontal = true;
 
+        if(AbstractDungeon.ascensionLevel >= 19){
+            this.breakBlockAmt = 75;
+        }else {
+            this.breakBlockAmt = 60;
+        }
 
         if(AbstractDungeon.ascensionLevel >= 9){
             this.setHp(MAX_HP + 40);
+            this.metallicizeAmt = 20;
+            this.marchBlockAmt = 15;
         }else{
             this.setHp(MAX_HP);
+            this.metallicizeAmt = 15;
+            this.marchBlockAmt = 12;
         }
 
-        float difficulty = 1.0f;
         if(AbstractDungeon.ascensionLevel >= 4){
-            difficulty *= 1.25f;
+            this.damage.add(new DamageInfo(this, ATTACK_DAMAGE + 1));
+            this.damage.add(new DamageInfo(this, ATTACK_DAMAGE_2 + 4));
+            this.damage.add(new DamageInfo(this, SKILL_DAMAGE + 2));
+        }else{
+            this.damage.add(new DamageInfo(this, ATTACK_DAMAGE));
+            this.damage.add(new DamageInfo(this, ATTACK_DAMAGE_2));
+            this.damage.add(new DamageInfo(this, SKILL_DAMAGE));
         }
-
-        this.damage.add(new DamageInfo(this, (int)(ATTACK_DAMAGE * difficulty)));
-        this.damage.add(new DamageInfo(this, (int)(ATTACK_DAMAGE_2 * difficulty)));
-        this.damage.add(new DamageInfo(this, (int)(SKILL_DAMAGE * difficulty)));
-
 
         // 示例配置：可根据你的动画名称修改
         animSpeedMap.put("Idle_1", 1.0f);
@@ -349,6 +359,7 @@ public class Buldrokkastee extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, BreakBlockPower_monster.POWER_ID));
 
                     this.skillCounter = 0;
+                    this.breakBlockAmt += 10;
 
                     break;
 
@@ -544,15 +555,22 @@ public class Buldrokkastee extends AbstractMonster {
         }
 
         StrengthPower strengthPower = (StrengthPower) this.getPower(StrengthPower.POWER_ID);
+        WeakPower weakPower = (WeakPower) this.getPower(WeakPower.POWER_ID);
 
-        if(strengthPower!=null && strengthPower.type== AbstractPower.PowerType.DEBUFF){
+        if(strengthPower!=null || weakPower!=null){
             if(this.firstTalk){
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this, monsterStrings.DIALOG[1], 1.0F, 2.0F));
                 this.firstTalk = false;
             }
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Strength"));
-        }
 
+            if(strengthPower != null){
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Strength"));
+            }
+
+            if(weakPower != null){
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Weakened"));
+            }
+        }
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RollMoveAction(this));
     }
 
@@ -589,10 +607,9 @@ public class Buldrokkastee extends AbstractMonster {
             case DESTROY:
                 if(skillCounter >= 2){
                     setMove((byte) 2, Intent.ATTACK_BUFF, this.damage.get(2).base);
-                    if (AbstractDungeon.ascensionLevel >= 19) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BreakBlockPower_monster(this)));
-                    }else{
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BreakBlockPower_monster(this, 60)));
+
+                    if(!this.hasPower(BreakBlockPower_monster.POWER_ID)){
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BreakBlockPower_monster(this, this.breakBlockAmt), this.breakBlockAmt));
                     }
                 }else{
                     setMove((byte) 1, Intent.ATTACK, this.damage.get(1).base);
@@ -720,7 +737,7 @@ public class Buldrokkastee extends AbstractMonster {
 
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDying && !m.isDead && !m.isDeadOrEscaped()) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this, MARCH_BLOCK));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this, this.marchBlockAmt));
             }
         }
 
@@ -730,12 +747,7 @@ public class Buldrokkastee extends AbstractMonster {
     public void usePreBattleAction() {
         AbstractDungeon.actionManager.addToBottom(new TalkAction(this, monsterStrings.DIALOG[0], 1.0F, 2.0F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new EmbattlePower(this, 2)));
-
-        if(AbstractDungeon.ascensionLevel >= 19){
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, 20)));
-        }else{
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, 15)));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, this.metallicizeAmt), this.metallicizeAmt));
 
         setMove((byte) 1, Intent.ATTACK, this.damage.get(0).base, ATTACK_HIT_TIMES, true);
         createIntent();

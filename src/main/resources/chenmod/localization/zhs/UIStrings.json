@@ -1,7 +1,7 @@
 {
   "${modID}:ChenModConfig": {
     "TEXT_DICT": {
-      "TIPS": "修改Config以后，务必创建【新的游戏】防止出现BUG!!!!!",
+      "CHANGE_MONSTERS": "将道中的小怪与精英改变(目前仅第四层)。",
       "ADD_EVENT_TOWERFIERCE": "添加事件【杀戮之塔(一层)】。",
       "ADD_FROST_NOVA": "添加【霜星(二层)】。",
       "ADD_MEPHISO_AND_FAUST": "添加【梅菲斯特&浮士德(二层)】。",

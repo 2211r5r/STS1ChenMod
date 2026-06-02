@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import chenmod.ChenMod;
+import chenmod.actions.NoFastWaitAction;
 import chenmod.cards.AttackCard;
 import chenmod.cards.AttackWeakPointCard;
 import chenmod.cards.DefendCard;

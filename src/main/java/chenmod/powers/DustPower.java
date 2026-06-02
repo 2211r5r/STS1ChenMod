@@ -24,8 +24,6 @@ public class DustPower extends BasePower {
     // 是否回合结束移除
     private static final boolean TURN_BASED = true;
 
-    private int drawCardCounter = 0;
-
     public DustPower(AbstractCreature owner, final int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, Math.max(1, amount));
         updateDescription();
@@ -33,16 +31,16 @@ public class DustPower extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0], this.amount);
+        this.description = String.format(DESCRIPTIONS[0], this.amount, this.amount, this.amount2);
     }
 
     // 你可以在这里添加 onInflictDamage / onAttacked / atEndOfTurn 等逻辑
     @Override
     public void onCardDraw(AbstractCard card) {
 
-        this.drawCardCounter++;
+        this.amount2++;
 
-        if(AbstractDungeon.player.currentHealth > 1 && this.drawCardCounter > 5){
+        if(AbstractDungeon.player.currentHealth > 1 && this.amount2 < this.amount){
             AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, 1, DamageInfo.DamageType.HP_LOSS));
             this.flashWithoutSound();
         }
@@ -55,7 +53,7 @@ public class DustPower extends BasePower {
             return;
         }
 
-        this.drawCardCounter = 0;
+        this.amount2 = 0;
 
         if (this.amount == 1) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));

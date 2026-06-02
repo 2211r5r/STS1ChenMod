@@ -1,8 +1,6 @@
 package chenmod.cards;
 
-import chenmod.actions.AddHitTimesAction;
-import chenmod.actions.DoubleSwordsAction;
-import chenmod.actions.YunLieAction;
+import chenmod.actions.*;
 import chenmod.character.ChenCharacter;
 import chenmod.powers.DoubleSwordsPower;
 import chenmod.util.CardStats;
@@ -19,6 +17,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class YunLieCard extends BaseCard {
 
@@ -62,7 +62,25 @@ public class YunLieCard extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new YunLieAction(this, this.magicNumber));
+
+        if (p instanceof ChenCharacter) {
+
+            CardCrawlGame.sound.play(Sounds.attackVoice_9);
+
+            ChenCharacter player = (ChenCharacter) p;
+
+            if(!player.isChen3){
+                this.addToBot(new NoFastWaitAction(1.0f));
+            }
+
+            player.changeSpine38ToChen3(player::useSkillAttackAnimation);
+
+        }
+
+        for (int i = 0; i < this.magicNumber; i++) {
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.LIGHTNING));
+        }
+
     }
 
     @Override
@@ -73,7 +91,7 @@ public class YunLieCard extends BaseCard {
         if(power != null && power.amount > 0) {
             this.addToBot(
                     new DoubleSwordsAction(
-                            new DamageInfo(AbstractDungeon.player, power.amount, DamageInfo.DamageType.NORMAL)
+                            new DamageInfo(AbstractDungeon.player, power.amount, DamageInfo.DamageType.THORNS)
                     ));
         }
     }

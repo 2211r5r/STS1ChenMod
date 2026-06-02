@@ -1,9 +1,11 @@
 package chenmod.cards;
 
 import chenmod.character.ChenCharacter;
+import chenmod.powers.DustPower;
 import chenmod.util.CardStats;
 import chenmod.util.ChenModConfig;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -52,7 +54,7 @@ public class DustCard extends BaseCard {
 
     @Override
     public void triggerOnExhaust() {
-        this.addToBot(new DrawCardAction(this.magicNumber));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DustPower(AbstractDungeon.player, 1), 1));
     }
 
     @Override

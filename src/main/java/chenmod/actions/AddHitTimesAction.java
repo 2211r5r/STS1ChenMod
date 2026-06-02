@@ -21,6 +21,14 @@ public class AddHitTimesAction extends AbstractGameAction {
         this.c = card;
     }
 
+    public AddHitTimesAction(AbstractCard card) {
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.p = AbstractDungeon.player;
+        this.duration = Settings.ACTION_DUR_FAST;
+        this.improveMagicNumber = 1;
+        this.c = card;
+    }
+
     @Override
     public void update() {
         if (c.type == AbstractCard.CardType.ATTACK && c.hasTag(CustomTags.MULTIPLE_ATTACKS)) {

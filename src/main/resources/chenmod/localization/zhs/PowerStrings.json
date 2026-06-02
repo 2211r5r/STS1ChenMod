@@ -161,7 +161,7 @@
   "${modID}:DustPower": {
     "NAME": "粉尘释放",
     "DESCRIPTIONS": [
-      "抽牌时，若当前回合内抽牌累计数量 #y大于 #b5 张，失去 #b1 点生命(不会 #y致死 )，持续 #b%d 个回合."
+      "从 #y抽牌堆 抽的前 #b%d 张牌会使你失去 #b1 点生命(不会 #y致死 )，持续 #b%d 个回合. 本回合已经从抽牌堆抽了 #b%d 张牌."
     ]
 },
   "${modID}:ZhuangShiPower": {
@@ -263,6 +263,30 @@
     "NAME": "艺术就是爆炸",
     "DESCRIPTIONS": [
       "#y琉璃壁 造成的伤害提高 #b%d %%."
+    ]
+  },
+  "${modID}:BridgePower": {
+    "NAME": "承启",
+    "DESCRIPTIONS": [
+      "回合开始时，向手中加入 #b%d 张 #y赤霄 牌."
+    ]
+  },
+  "${modID}:SwiftStepsPower": {
+    "NAME": "迅捷步伐",
+    "DESCRIPTIONS": [
+      "再从 #y抽牌堆中 抽到 #b%d 张牌后，获得 #b%d 点 [R] ."
+    ]
+  },
+  "${modID}:FightingSpiritPower": {
+    "NAME": "战鼓",
+    "DESCRIPTIONS": [
+      "回合开始时，使用并 #y消耗 抽牌堆顶部的 #b%d 张牌 ."
+    ]
+  },
+  "${modID}:FranticZombiePower": {
+    "NAME": "狂暴宿主",
+    "DESCRIPTIONS": [
+      "回合结束时，失去 #b%d 生命，获得 #b%d 点 #y力量 。"
     ]
   }
 }

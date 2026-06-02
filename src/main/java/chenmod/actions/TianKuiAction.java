@@ -18,8 +18,6 @@ public class TianKuiAction extends AbstractGameAction {
     private final float percent; // 6%
     private final int baseMinDamage; // 卡牌面板上的最少伤害（未加力量）
 
-    private boolean isFirstEffect = true;
-
     private final AbstractCreature source;
 
     private final AbstractCreature target;
@@ -40,70 +38,43 @@ public class TianKuiAction extends AbstractGameAction {
     @Override
     public void update() {
 
-        if(isFirstEffect){
-            if (player instanceof ChenCharacter) {
-                // 第二步：安全强转（100%不会报错）
-                CardCrawlGame.sound.play(Sounds.tianKuiVoice);
+        if (player instanceof ChenCharacter) {
+            // 第二步：安全强转（100%不会报错）
+            CardCrawlGame.sound.play(Sounds.tianKuiVoice);
 
-                ChenCharacter p = (ChenCharacter) player;
+            ChenCharacter p = (ChenCharacter) player;
 
-                p.changeSpine38ToChen3(()->{
-                    if (target == null || target.isDeadOrEscaped()) {
-                        this.isDone = true;
-                        return;
-                    }
-
-                    p.useSkillAttackAnimation();
-
-                    int base = baseMinDamage;
-
-                    DamageInfo newInfo;
-
-                    int percentBase = (int)(target.maxHealth * percent);
-
-                    if(percentBase >= baseMinDamage){
-                        base = percentBase;
-                        newInfo = new DamageInfo(target, base, DamageInfo.DamageType.NORMAL);
-                        newInfo.applyPowers(source, target);
-                    }else{
-                        newInfo = new DamageInfo(source, base, DamageInfo.DamageType.NORMAL);
-                    }
-
-                    AbstractDungeon.actionManager.addToTop(
-                            new DamageAction(target, newInfo, AttackEffect.SLASH_HEAVY)
-                    );
-
-                    this.isDone = true;
-                });
-
-            }else{
-                if (target == null || target.isDeadOrEscaped()) {
-                    this.isDone = true;
-                    return;
-                }
-
-                int base = baseMinDamage;
-
-                DamageInfo newInfo;
-
-                int percentBase = (int)(target.maxHealth * percent);
-
-                if(percentBase >= baseMinDamage){
-                    base = percentBase;
-                    newInfo = new DamageInfo(target, base, DamageInfo.DamageType.NORMAL);
-                    newInfo.applyPowers(source, target);
-                }else{
-                    newInfo = new DamageInfo(source, base, DamageInfo.DamageType.NORMAL);
-                }
-
-                AbstractDungeon.actionManager.addToTop(
-                        new DamageAction(target, newInfo, AttackEffect.SLASH_HEAVY)
-                );
-
-                this.isDone = true;
+            if(!p.isChen3){
+                AbstractDungeon.actionManager.addToBottom(new NoFastWaitAction(1.0f));
             }
 
-            isFirstEffect = false;
+            p.changeSpine38ToChen3(p::useSkillAttackAnimation);
+
         }
+
+        if (target == null || target.isDeadOrEscaped()) {
+            this.isDone = true;
+            return;
+        }
+
+        int base = baseMinDamage;
+
+        DamageInfo newInfo;
+
+        int percentBase = (int)(target.maxHealth * percent);
+
+        if(percentBase >= baseMinDamage){
+            base = percentBase;
+            newInfo = new DamageInfo(target, base, DamageInfo.DamageType.NORMAL);
+            newInfo.applyPowers(source, target);
+        }else{
+            newInfo = new DamageInfo(source, base, DamageInfo.DamageType.NORMAL);
+        }
+
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(target, newInfo, AttackEffect.SLASH_HEAVY)
+        );
+
+        this.isDone = true;
     }
 }

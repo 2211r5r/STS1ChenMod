@@ -139,13 +139,13 @@ public class Talulah extends AbstractMonster{
 
         if(AbstractDungeon.ascensionLevel >= 19){
             this.fierceBurningAmt = 3;
-            this.flameBarrierAmt = 2;
+            this.flameBarrierAmt = 3;
             this.maxFlameBarrierAmount = 5;
             this.strengthAmt = 3;
         }else{
             this.fierceBurningAmt = 2;
-            this.flameBarrierAmt = 1;
-            this.maxFlameBarrierAmount = 4;
+            this.flameBarrierAmt = 2;
+            this.maxFlameBarrierAmount = 5;
             this.strengthAmt = 2;
         }
 
@@ -379,6 +379,9 @@ public class Talulah extends AbstractMonster{
 
                     FlameBarrierPower flameBarrier = (FlameBarrierPower) this.getPower(FlameBarrierPower.POWER_ID);
 
+                    float effectDuration = Settings.FAST_MODE ? 0.1f : 0.5f;
+                    this.addToBot(new VFXAction(this, new FlameBarrierEffect(this.hb.cX, this.hb.cY), effectDuration));
+
                     switch (this.posture){
                         case NORMAL:
 
@@ -389,8 +392,6 @@ public class Talulah extends AbstractMonster{
 
 
                             if (flameBarrier == null || flameBarrier.amount < this.maxFlameBarrierAmount) {
-                                float effectDuration = Settings.FAST_MODE ? 0.1f : 0.5f;
-                                this.addToBot(new VFXAction(this, new FlameBarrierEffect(this.hb.cX, this.hb.cY), effectDuration));
                                 AbstractDungeon.actionManager.addToBottom(
                                         new ApplyPowerAction(this, this, new FlameBarrierPower(this, this.flameBarrierAmt), this.flameBarrierAmt)
                                 );
@@ -417,8 +418,6 @@ public class Talulah extends AbstractMonster{
                             }
 
                             if (flameBarrier == null || flameBarrier.amount < this.maxFlameBarrierAmount) {
-                                float effectDuration = Settings.FAST_MODE ? 0.1f : 0.5f;
-                                this.addToBot(new VFXAction(this, new FlameBarrierEffect(this.hb.cX, this.hb.cY), effectDuration));
                                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FlameBarrierPower(this, this.flameBarrierAmt), this.flameBarrierAmt));
                                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strengthAmt), this.strengthAmt));
 
@@ -442,8 +441,6 @@ public class Talulah extends AbstractMonster{
                             }
 
                             if (flameBarrier == null || flameBarrier.amount <  this. maxFlameBarrierAmount) {
-                                float effectDuration = Settings.FAST_MODE ? 0.1f : 0.5f;
-                                this.addToBot(new VFXAction(this, new FlameBarrierEffect(this.hb.cX, this.hb.cY), effectDuration));
                                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FlameBarrierPower(this, this.flameBarrierAmt), this.flameBarrierAmt));
                                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strengthAmt), this.strengthAmt));
 
@@ -601,6 +598,7 @@ public class Talulah extends AbstractMonster{
                         AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(3),
                                 AbstractGameAction.AttackEffect.FIRE));
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FierceBurningPower(AbstractDungeon.player, this.fierceBurningAmt), this.fierceBurningAmt));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strengthAmt), this.strengthAmt));
 
                         AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
                         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));

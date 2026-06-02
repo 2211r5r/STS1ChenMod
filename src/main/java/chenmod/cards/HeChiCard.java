@@ -1,5 +1,6 @@
 package chenmod.cards;
 
+import chenmod.actions.AddCostForTurnAction;
 import chenmod.character.ChenCharacter;
 import chenmod.util.CardStats;
 import chenmod.util.Sounds;
@@ -42,6 +43,7 @@ public class HeChiCard extends BaseCard{
 
         this.addToBot(new GainEnergyAction(1));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
+        this.addToBot(new AddCostForTurnAction(this));
 
     }
 
