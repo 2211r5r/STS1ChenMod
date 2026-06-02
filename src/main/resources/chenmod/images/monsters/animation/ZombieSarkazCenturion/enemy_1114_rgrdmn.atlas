@@ -1,0 +1,195 @@
+
+enemy_1114_rgrdmn.png
+size: 274,420
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effect
+  rotate: false
+  xy: 2, 320
+  size: 259, 98
+  orig: 296, 177
+  offset: 18, 40
+  index: -1
+Head
+  rotate: false
+  xy: 170, 165
+  size: 58, 63
+  orig: 60, 65
+  offset: 1, 1
+  index: -1
+L_Arm
+  rotate: false
+  xy: 160, 61
+  size: 37, 38
+  orig: 37, 38
+  offset: 0, 0
+  index: -1
+L_Arm_ B
+  rotate: false
+  xy: 230, 131
+  size: 38, 52
+  orig: 38, 52
+  offset: 0, 0
+  index: -1
+L_Foot_A
+  rotate: false
+  xy: 38, 62
+  size: 36, 26
+  orig: 38, 30
+  offset: 1, 3
+  index: -1
+L_Foot_B
+  rotate: false
+  xy: 2, 59
+  size: 34, 29
+  orig: 35, 32
+  offset: 1, 2
+  index: -1
+L_Hand
+  rotate: false
+  xy: 2, 30
+  size: 25, 27
+  orig: 29, 29
+  offset: 3, 0
+  index: -1
+L_Hand_A
+  rotate: false
+  xy: 38, 35
+  size: 27, 25
+  orig: 27, 25
+  offset: 0, 0
+  index: -1
+L_Hand_B
+  rotate: false
+  xy: 76, 35
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+L_Horn
+  rotate: false
+  xy: 234, 2
+  size: 35, 32
+  orig: 37, 38
+  offset: 1, 3
+  index: -1
+L_Kneecap
+  rotate: false
+  xy: 171, 31
+  size: 23, 28
+  orig: 23, 29
+  offset: 0, 1
+  index: -1
+L_Leg
+  rotate: false
+  xy: 230, 248
+  size: 40, 70
+  orig: 40, 70
+  offset: 0, 0
+  index: -1
+R_Arm
+  rotate: false
+  xy: 111, 129
+  size: 57, 99
+  orig: 66, 99
+  offset: 4, 0
+  index: -1
+R_Foot_A
+  rotate: false
+  xy: 108, 42
+  size: 35, 25
+  orig: 35, 25
+  offset: 0, 0
+  index: -1
+R_Foot_B
+  rotate: false
+  xy: 76, 63
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+R_Hand
+  rotate: false
+  xy: 234, 36
+  size: 35, 34
+  orig: 35, 36
+  offset: 0, 1
+  index: -1
+R_Horn
+  rotate: false
+  xy: 199, 31
+  size: 33, 39
+  orig: 40, 41
+  offset: 3, 1
+  index: -1
+R_Kneecap
+  rotate: false
+  xy: 145, 31
+  size: 24, 28
+  orig: 24, 28
+  offset: 0, 0
+  index: -1
+R_Leg
+  rotate: false
+  xy: 170, 101
+  size: 48, 62
+  orig: 48, 62
+  offset: 0, 0
+  index: -1
+Spark_1
+  rotate: false
+  xy: 29, 15
+  size: 31, 18
+  orig: 51, 63
+  offset: 17, 9
+  index: -1
+Spark_2
+  rotate: false
+  xy: 105, 24
+  size: 36, 16
+  orig: 51, 63
+  offset: 12, 10
+  index: -1
+Spark_3
+  rotate: false
+  xy: 62, 16
+  size: 26, 17
+  orig: 51, 63
+  offset: 22, 10
+  index: -1
+Spark_4
+  rotate: false
+  xy: 111, 69
+  size: 47, 58
+  orig: 51, 63
+  offset: 3, 2
+  index: -1
+Spark_5
+  rotate: false
+  xy: 230, 185
+  size: 42, 61
+  orig: 51, 63
+  offset: 9, 2
+  index: -1
+Spark_6
+  rotate: false
+  xy: 220, 72
+  size: 49, 57
+  orig: 51, 63
+  offset: 2, 6
+  index: -1
+Waist
+  rotate: false
+  xy: 2, 90
+  size: 107, 138
+  orig: 114, 144
+  offset: 2, 6
+  index: -1
+Weapon
+  rotate: false
+  xy: 2, 230
+  size: 226, 88
+  orig: 226, 88
+  offset: 0, 0
+  index: -1

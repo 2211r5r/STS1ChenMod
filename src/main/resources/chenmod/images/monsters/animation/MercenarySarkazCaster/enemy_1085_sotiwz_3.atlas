@@ -1,0 +1,174 @@
+
+enemy_1085_sotiwz_3.png
+size: 124,587
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 370
+  size: 77, 116
+  orig: 77, 116
+  offset: 0, 0
+  index: -1
+Cloak
+  rotate: false
+  xy: 2, 488
+  size: 110, 97
+  orig: 110, 97
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 283
+  size: 63, 85
+  orig: 63, 85
+  offset: 0, 0
+  index: -1
+L_Arm
+  rotate: false
+  xy: 64, 198
+  size: 49, 59
+  orig: 50, 59
+  offset: 0, 0
+  index: -1
+L_Calf
+  rotate: false
+  xy: 81, 415
+  size: 40, 33
+  orig: 41, 34
+  offset: 1, 0
+  index: -1
+L_Foot
+  rotate: false
+  xy: 50, 50
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+L_Foot_top
+  rotate: false
+  xy: 50, 77
+  size: 31, 23
+  orig: 31, 23
+  offset: 0, 0
+  index: -1
+L_Forearm
+  rotate: false
+  xy: 83, 49
+  size: 30, 39
+  orig: 30, 39
+  offset: 0, 0
+  index: -1
+L_Hand
+  rotate: false
+  xy: 81, 367
+  size: 38, 46
+  orig: 38, 46
+  offset: 0, 0
+  index: -1
+L_Horn
+  rotate: false
+  xy: 67, 259
+  size: 50, 24
+  orig: 50, 24
+  offset: 0, 0
+  index: -1
+L_Knee
+  rotate: false
+  xy: 97, 173
+  size: 23, 23
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+L_Leg
+  rotate: false
+  xy: 2, 225
+  size: 60, 56
+  orig: 60, 56
+  offset: 0, 0
+  index: -1
+R_Arm
+  rotate: false
+  xy: 80, 322
+  size: 38, 43
+  orig: 38, 43
+  offset: 0, 0
+  index: -1
+R_Calf
+  rotate: false
+  xy: 50, 102
+  size: 36, 41
+  orig: 36, 41
+  offset: 0, 0
+  index: -1
+R_Foot
+  rotate: false
+  xy: 50, 23
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
+R_Foot_top
+  rotate: false
+  xy: 88, 90
+  size: 32, 23
+  orig: 32, 23
+  offset: 0, 0
+  index: -1
+R_Forearm
+  rotate: false
+  xy: 80, 288
+  size: 33, 32
+  orig: 34, 32
+  offset: 0, 0
+  index: -1
+R_Hand
+  rotate: false
+  xy: 81, 450
+  size: 40, 36
+  orig: 40, 36
+  offset: 0, 0
+  index: -1
+R_Hand_Finger
+  rotate: false
+  xy: 88, 115
+  size: 34, 28
+  orig: 34, 32
+  offset: 0, 4
+  index: -1
+R_Horn
+  rotate: false
+  xy: 82, 27
+  size: 29, 20
+  orig: 30, 40
+  offset: 1, 5
+  index: -1
+R_Knee
+  rotate: false
+  xy: 97, 150
+  size: 23, 21
+  orig: 23, 22
+  offset: 0, 1
+  index: -1
+R_Leg
+  rotate: false
+  xy: 50, 145
+  size: 45, 51
+  orig: 45, 53
+  offset: 0, 0
+  index: -1
+Wapon_tape
+  rotate: false
+  xy: 67, 285
+  size: 11, 83
+  orig: 11, 83
+  offset: 0, 0
+  index: -1
+Weapon
+  rotate: false
+  xy: 2, 2
+  size: 46, 221
+  orig: 46, 221
+  offset: 0, 0
+  index: -1

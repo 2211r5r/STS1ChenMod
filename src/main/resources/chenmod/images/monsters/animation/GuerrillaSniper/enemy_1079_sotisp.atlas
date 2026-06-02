@@ -1,0 +1,209 @@
+
+enemy_1079_sotisp.png
+size: 617,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+C_Arm
+  rotate: false
+  xy: 493, 2
+  size: 21, 32
+  orig: 25, 33
+  offset: 2, 1
+  index: -1
+C_Armer
+  rotate: false
+  xy: 184, 3
+  size: 48, 46
+  orig: 51, 48
+  offset: 0, 2
+  index: -1
+C_Arrow
+  rotate: false
+  xy: 524, 98
+  size: 90, 26
+  orig: 91, 27
+  offset: 0, 1
+  index: -1
+C_Bag
+  rotate: false
+  xy: 2, 5
+  size: 79, 119
+  orig: 79, 119
+  offset: 0, 0
+  index: -1
+C_Belt
+  rotate: false
+  xy: 342, 64
+  size: 68, 60
+  orig: 68, 60
+  offset: 0, 0
+  index: -1
+C_Belt_back
+  rotate: false
+  xy: 493, 63
+  size: 29, 25
+  orig: 29, 25
+  offset: 0, 0
+  index: -1
+C_Cloak
+  rotate: false
+  xy: 441, 72
+  size: 47, 52
+  orig: 47, 52
+  offset: 0, 0
+  index: -1
+C_Crossbow
+  rotate: false
+  xy: 234, 2
+  size: 164, 58
+  orig: 164, 58
+  offset: 0, 0
+  index: -1
+C_Forearm
+  rotate: false
+  xy: 544, 43
+  size: 37, 21
+  orig: 37, 22
+  offset: 0, 1
+  index: -1
+C_Hat
+  rotate: false
+  xy: 146, 51
+  size: 80, 73
+  orig: 81, 73
+  offset: 1, 0
+  index: -1
+C_Hat_back
+  rotate: false
+  xy: 228, 62
+  size: 54, 62
+  orig: 54, 63
+  offset: 0, 0
+  index: -1
+C_L_Calf
+  rotate: false
+  xy: 447, 21
+  size: 44, 49
+  orig: 44, 52
+  offset: 0, 2
+  index: -1
+C_L_Foot
+  rotate: false
+  xy: 542, 2
+  size: 37, 33
+  orig: 37, 39
+  offset: 0, 0
+  index: -1
+C_L_Hand
+  rotate: false
+  xy: 581, 11
+  size: 31, 23
+  orig: 32, 24
+  offset: 1, 1
+  index: -1
+C_L_Knee
+  rotate: false
+  xy: 520, 37
+  size: 22, 24
+  orig: 26, 24
+  offset: 3, 0
+  index: -1
+C_L_Leg
+  rotate: false
+  xy: 83, 2
+  size: 21, 39
+  orig: 22, 40
+  offset: 0, 0
+  index: -1
+C_Mask
+  rotate: false
+  xy: 284, 63
+  size: 56, 61
+  orig: 57, 65
+  offset: 0, 0
+  index: -1
+C_R_Arm
+  rotate: false
+  xy: 587, 36
+  size: 25, 31
+  orig: 27, 31
+  offset: 0, 0
+  index: -1
+C_R_Calf
+  rotate: false
+  xy: 400, 6
+  size: 45, 56
+  orig: 47, 56
+  offset: 2, 0
+  index: -1
+C_R_Foot
+  rotate: false
+  xy: 139, 6
+  size: 43, 35
+  orig: 44, 35
+  offset: 1, 0
+  index: -1
+C_R_Forearm
+  rotate: false
+  xy: 106, 5
+  size: 31, 36
+  orig: 31, 37
+  offset: 0, 0
+  index: -1
+C_R_Hand_Finger
+  rotate: false
+  xy: 493, 36
+  size: 25, 25
+  orig: 25, 26
+  offset: 0, 1
+  index: -1
+C_R_Hand_Palm
+  rotate: false
+  xy: 587, 69
+  size: 28, 27
+  orig: 29, 28
+  offset: 0, 1
+  index: -1
+C_R_Knee
+  rotate: false
+  xy: 516, 9
+  size: 24, 25
+  orig: 27, 25
+  offset: 3, 0
+  index: -1
+C_R_Leg
+  rotate: false
+  xy: 490, 90
+  size: 32, 34
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+C_Rope
+  rotate: false
+  xy: 146, 45
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+C_Scarf
+  rotate: false
+  xy: 524, 66
+  size: 61, 30
+  orig: 65, 33
+  offset: 4, 3
+  index: -1
+C_Skirt
+  rotate: false
+  xy: 83, 43
+  size: 61, 81
+  orig: 61, 81
+  offset: 0, 0
+  index: -1
+C_Tape
+  rotate: false
+  xy: 412, 70
+  size: 27, 54
+  orig: 27, 54
+  offset: 0, 0
+  index: -1
